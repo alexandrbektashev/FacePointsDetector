@@ -8,13 +8,16 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace AffdexSampleApp
 {
     public partial class ProcessCameraFeed : Form, Affdex.ImageListener
     {
+        StreamWriter sw;
         public ProcessCameraFeed(Affdex.Detector detector)
         {
+            sw = new StreamWriter("myface.txt");
             detector.setImageListener(this);
             InitializeComponent();
         }
@@ -31,15 +34,25 @@ namespace AffdexSampleApp
                 foreach (KeyValuePair<int, Affdex.Face> pair in dict)
                 {
                     Affdex.Face face = pair.Value;
-                    
-                    foreach (PropertyInfo prop in typeof(Affdex.Emotions).GetProperties())
+
+                    //foreach (PropertyInfo prop in typeof(Affdex.Emotions).GetProperties())
+                    //{
+                    //    float value = (float)prop.GetValue(face.Emotions, null);
+                    //    string output = string.Format("{0}: {1:0.00}", prop.Name, value);
+                    //    System.Console.WriteLine(output);
+                    //}
+
+                    var featurePoints = face.FeaturePoints;
+                    StringBuilder output = new StringBuilder();
+                    foreach (var p in featurePoints)
                     {
-                        float value = (float)prop.GetValue(face.Emotions, null);
-                        string output = string.Format("{0}: {1:0.00}", prop.Name, value);
-                        System.Console.WriteLine(output);
+                        output.Append(string.Format("{0}:{1};",p.X, p.Y));
                     }
+                    sw.WriteLine(output);
+                    Console.WriteLine("Success! {0} points were written.", featurePoints.Length);
 
                 }
+
             }
         }
     }
