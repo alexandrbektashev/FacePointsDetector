@@ -46,7 +46,7 @@ namespace AffdexSampleApp
                     StringBuilder output = new StringBuilder();
                     foreach (var p in featurePoints)
                     {
-                        output.Append(string.Format("{0}:{1};",p.X, p.Y));
+                        output.Append(string.Format("{0:0}:{1:0};", p.X, p.Y));
                     }
                     sw.WriteLine(output);
                     Console.WriteLine("Success! {0} points were written.", featurePoints.Length);

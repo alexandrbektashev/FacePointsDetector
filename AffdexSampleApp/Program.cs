@@ -17,12 +17,15 @@ namespace AffdexSampleApp
 
             Affdex.Detector myDetector = new Affdex.CameraDetector(0, 30, 10, 1, Affdex.FaceDetectorMode.LARGE_FACES);
 
+
             myDetector.setClassifierPath("C:\\Program Files\\Affectiva\\AffdexSDK\\data");
 
             ProcessCameraFeed feedform = new ProcessCameraFeed(myDetector);
             myDetector.setDetectAllEmotions(true);
             myDetector.setDetectSmirk(true);
             myDetector.setDetectGlasses(true);
+
+            
 
             myDetector.start();
             feedform.ShowDialog();
