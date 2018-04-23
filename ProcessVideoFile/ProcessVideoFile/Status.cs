@@ -9,19 +9,31 @@ namespace ProcessVideoFile
 {
     class Status : ProcessStatusListener
     {
-        public Status(VideoDetector detector)
+        public delegate void GetInfo(string message);
+
+        private GetInfo ShowMessage;
+        private GetInfo WriteInfo;
+
+        public Status(VideoDetector detector, GetInfo showMessage, GetInfo writeInfo)
         {
+
+            ShowMessage = showMessage;
+            WriteInfo = writeInfo;
             detector.setProcessStatusListener(this);
         }
 
         void ProcessStatusListener.onProcessingException(AffdexException ex)
         {
-            Console.WriteLine(  ex.Message);
+            ShowMessage(ex.Message);
+            WriteInfo(ex.Message);
+
         }
 
         void ProcessStatusListener.onProcessingFinished()
         {
-            Console.WriteLine("Processing finished!");
+            ShowMessage("Processing finished!");
+            WriteInfo("Processing finished!");
+
         }
     }
 }
