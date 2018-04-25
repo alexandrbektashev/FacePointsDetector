@@ -15,7 +15,10 @@ namespace ProcessVideoFile
         public delegate void GetInfo(string message);
 
         private GetInfo ShowMessage;
-        private GetInfo WriteInfo;
+        private GetInfo WriteInfoExpressions;
+        private GetInfo WriteInfoEmotions;
+        private GetInfo WriteInfoFeaturePoints;
+        
 
         private int frameCapturedCounter = 0;
         private int frameProcessedCounter = 0;
@@ -23,10 +26,13 @@ namespace ProcessVideoFile
         const int longestWordLenght = 19; //this is based on expressions properties
 
         public ProcessVideoFeed(VideoDetector detector,
-            GetInfo showMessage, GetInfo writeInfo)
+            GetInfo showMessage, GetInfo writeInfoExpressions, 
+            GetInfo writeInfoEmotions, GetInfo writeInfoFeaturePoints)
         {
             ShowMessage = showMessage;
-            WriteInfo = writeInfo;
+            WriteInfoExpressions = writeInfoExpressions;
+            WriteInfoEmotions = writeInfoEmotions;
+            WriteInfoFeaturePoints = writeInfoFeaturePoints;
 
             detector.setImageListener(this);
 
@@ -47,37 +53,43 @@ namespace ProcessVideoFile
                     Affdex.Face face = pair.Value;
                     StringBuilder output = new StringBuilder();
 
-                    //foreach (PropertyInfo prop in typeof(Affdex.Emotions).GetProperties())
-                    //{
-                    //    float value = (float)prop.GetValue(face.Emotions, null);
-                    //    string output = string.Format("{0}: {1:0.00}", prop.Name, value);
-                    //}
-
-                    //heading output
                     if (isFirstFrame)
                     {
-                        output.Append(string.Format("{0,4}{1,9}", frameProcessedCounter, "TimeScale"));
+                        output.Append(string.Format("{0,5}{1,9}", "Frame", "TimeScale"));
                         foreach (PropertyInfo prop in typeof(Affdex.Expressions).GetProperties())
                         {
-                            output.Append(string.Format("{0, 19}", prop.Name));
+                            output.Append(string.Format("#{0,19}", prop.Name));
                         }
                         output.Append(Environment.NewLine);
-                        WriteInfo(output.ToString());
+                        WriteInfoExpressions(output.ToString());
                         output.Clear();
-                    }                 
+
+                        output.Append(string.Format("{0,5}{1,9}", "Frame", "TimeScale"));
+                        foreach (PropertyInfo prop in typeof(Affdex.Emotions).GetProperties())
+                        {
+                            output.Append(string.Format("#{0,19}", prop.Name));
+                        }
+                        output.Append(Environment.NewLine);
+                        WriteInfoEmotions(output.ToString());
+                        output.Clear();
+
+                        output.Append("Face feature points" + Environment.NewLine);
+                        WriteInfoFeaturePoints(output.ToString());
+                        output.Clear();
+                    }
                     isFirstFrame = false;
 
                     //timescale and frame count output
-                    output.Append(string.Format("{0,4}{1,9:0.0000}", frameProcessedCounter, frame.getTimestamp()));
+                    output.Append(string.Format("{0,4}#{1,9:0.0000}", frameProcessedCounter, frame.getTimestamp()));
                     
                     //expressions output
                     foreach (PropertyInfo prop in typeof(Affdex.Expressions).GetProperties())
                     {
                         float value = (float)prop.GetValue(face.Expressions, null);
-                        output.Append(string.Format("{0,19:0.0000000}", value));
+                        output.Append(string.Format("#{0,19:0.0000000}", value));
                     }
                     output.Append(Environment.NewLine);
-                    WriteInfo(output.ToString());
+                    WriteInfoExpressions(output.ToString());
 
                     //output of feature points
                     output.Clear();
@@ -87,8 +99,21 @@ namespace ProcessVideoFile
                         output.Append(string.Format("{0:0}:{1:0};", p.X, p.Y));
                     }
                     output.Append(Environment.NewLine);
-                    WriteInfo(output.ToString());
-                                       
+                    WriteInfoFeaturePoints(output.ToString());
+                    output.Clear();
+
+                    //timescale and frame count output
+                    output.Append(string.Format("{0,4}#{1,9:0.0000}", frameProcessedCounter, frame.getTimestamp()));
+
+                    //expressions output
+                    foreach (PropertyInfo prop in typeof(Affdex.Emotions).GetProperties())
+                    {
+                        float value = (float)prop.GetValue(face.Emotions, null);
+                        output.Append(string.Format("#{0,19:0.0000000}", value));
+                    }
+                    output.Append(Environment.NewLine);
+                    WriteInfoEmotions(output.ToString());
+
                     frameProcessedCounter++;
                 }
             }

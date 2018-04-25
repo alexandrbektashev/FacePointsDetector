@@ -9,14 +9,27 @@ namespace ProcessVideoFile
 {
     class FaceTracker : FaceListener
     {
+
+        public delegate void GetInfo(string message);
+
+        private GetInfo ShowMessage;
+        private GetInfo WriteInfo;
+
+        public FaceTracker(VideoDetector detector, GetInfo showMessage, GetInfo writeInfo)
+        {
+            ShowMessage = showMessage;
+            WriteInfo = writeInfo;
+            detector.setFaceListener(this);
+        }
+
         void FaceListener.onFaceFound(float timestamp, int faceId)
         {
-            throw new NotImplementedException();
+            ShowMessage(String.Format("{0} face detected on {1}", faceId, timestamp));
         }
 
         void FaceListener.onFaceLost(float timestamp, int faceId)
         {
-            throw new NotImplementedException();
+            ShowMessage("Face lost");
         }
     }
 }
