@@ -19,22 +19,28 @@ namespace ProcessVideoFile
         const string defaultVideFileName = "video.mp4";
         const string defaultLogFileName = "LogProcessedFile.txt";
 
+        static VideoDetector detector;
+        static ProcessVideoFeed pvd;
+        static Status status;
+
+
         static void Main(string[] args)
         {
             try
             {
+                File.Delete(defaultLogFileName);
+
                 //initialize detector
-                VideoDetector detector = new VideoDetector(defaultFrameRate, defaultMaxNumFaces, defaultDetectorMode);
+                detector = new VideoDetector(defaultFrameRate, defaultMaxNumFaces, defaultDetectorMode);
                 detector.setClassifierPath(defaultClassifierPath);
 
                 //initialize callback functions
-                ProcessVideoFeed pvd = new ProcessVideoFeed(detector, ShowMessage, WriteInfo);
-                Status status = new Status(detector, ShowMessage, WriteInfo);
+                 pvd = new ProcessVideoFeed(detector, ShowMessage, WriteInfo1);
+                 status = new Status(detector, ShowMessage, WriteInfo1);
 
                 //set detector's options
-                detector.setDetectAllEmotions(true);
-                detector.setDetectSmirk(true);
-                detector.setDetectGlasses(true);
+                detector.setDetectAllExpressions(true);
+
 
                 //start and process detector
                 detector.start();
@@ -55,7 +61,7 @@ namespace ProcessVideoFile
             catch (Exception ex)
             {
                 ShowMessage(ex.Message);
-                WriteInfo(ex.Message);
+                WriteInfo1(ex.Message);
             }
 
         }
@@ -65,8 +71,9 @@ namespace ProcessVideoFile
             Console.WriteLine(message);
         }
 
-        private static void WriteInfo(string info)
+        private static void WriteInfo1(string info)
         {
+            
             File.AppendAllText(defaultLogFileName, info);
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Timers;
 using System.Threading.Tasks;
 using Affdex;
 
@@ -18,6 +19,8 @@ namespace ProcessVideoFile
 
         private int frameCapturedCounter = 0;
         private int frameProcessedCounter = 0;
+        private bool isFirstFrame = true;
+        const int longestWordLenght = 19; //this is based on expressions properties
 
         public ProcessVideoFeed(VideoDetector detector,
             GetInfo showMessage, GetInfo writeInfo)
@@ -43,31 +46,49 @@ namespace ProcessVideoFile
                 {
                     Affdex.Face face = pair.Value;
                     StringBuilder output = new StringBuilder();
+
                     //foreach (PropertyInfo prop in typeof(Affdex.Emotions).GetProperties())
                     //{
                     //    float value = (float)prop.GetValue(face.Emotions, null);
                     //    string output = string.Format("{0}: {1:0.00}", prop.Name, value);
                     //}
 
+                    //heading output
+                    if (isFirstFrame)
+                    {
+                        output.Append(string.Format("{0,4}{1,9}", frameProcessedCounter, "TimeScale"));
+                        foreach (PropertyInfo prop in typeof(Affdex.Expressions).GetProperties())
+                        {
+                            output.Append(string.Format("{0, 19}", prop.Name));
+                        }
+                        output.Append(Environment.NewLine);
+                        WriteInfo(output.ToString());
+                        output.Clear();
+                    }                 
+                    isFirstFrame = false;
+
+                    //timescale and frame count output
+                    output.Append(string.Format("{0,4}{1,9:0.0000}", frameProcessedCounter, frame.getTimestamp()));
+                    
+                    //expressions output
                     foreach (PropertyInfo prop in typeof(Affdex.Expressions).GetProperties())
                     {
-                        if (prop.Name == "EyeClosure")
-                        {
-                            float value = (float)prop.GetValue(face.Expressions, null);
-                            ShowMessage(string.Format("{0} - {1:0.00}", prop.Name, value));
-                        }
+                        float value = (float)prop.GetValue(face.Expressions, null);
+                        output.Append(string.Format("{0,19:0.0000000}", value));
                     }
-                        
+                    output.Append(Environment.NewLine);
+                    WriteInfo(output.ToString());
 
+                    //output of feature points
+                    output.Clear();
                     var featurePoints = face.FeaturePoints;
-                    
-
                     foreach (var p in featurePoints)
                     {
                         output.Append(string.Format("{0:0}:{1:0};", p.X, p.Y));
                     }
-
-                    //WriteInfo(output.ToString());
+                    output.Append(Environment.NewLine);
+                    WriteInfo(output.ToString());
+                                       
                     frameProcessedCounter++;
                 }
             }
