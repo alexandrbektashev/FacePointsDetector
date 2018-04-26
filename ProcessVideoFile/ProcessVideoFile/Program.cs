@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Affdex;
+using System.Drawing;
 
 
 namespace ProcessVideoFile
@@ -33,35 +34,12 @@ namespace ProcessVideoFile
         {
             try
             {
-                File.Delete(logFileName1);
-                File.Delete(logFileName2);
-                File.Delete(logFileName3);
+                ProcessVideo();
 
-                //initialize detector
-                detector = new VideoDetector(defaultFrameRate, defaultMaxNumFaces, defaultDetectorMode);
-                detector.setClassifierPath(defaultClassifierPath);
+                Analyser analysis = new Analyser(pvd.GetFaceData());
 
-                //initialize callback functions
-                pvd = new ProcessVideoFeed(detector, ShowMessage, WriteInfo1, WriteInfo2, WriteInfo3);
-                status = new Status(detector, ShowMessage, WriteInfo1);
-                tracker = new FaceTracker(detector, ShowMessage, WriteInfo1);
+                ShowMessage(string.Format("{0} eye closures detected", analysis.EyeClosureCount()));
 
-                //set detector's options
-                detector.setDetectAllExpressions(true);
-                detector.setDetectAllEmotions(true);
-                
-                //start and process detector
-                detector.start();
-                detector.process(defaultVideFileName);
-
-                //show some info
-                Console.Read();
-
-
-                //stop detector
-                detector.stop();
-
-                ShowMessage(String.Format("Video processing done! {0} frames were captured, {1} frames was processed", pvd.GetFrameCapturedCount(), pvd.GetFrameProcessedCount()));
                 Console.ReadKey();
 
             }
@@ -69,10 +47,49 @@ namespace ProcessVideoFile
             catch (Exception ex)
             {
                 ShowMessage(ex.Message);
-                WriteInfo1(ex.Message);
+                Console.ReadKey();
             }
 
         }
+
+
+        private static void ProcessVideo()
+        {
+            File.Delete(logFileName1);
+            File.Delete(logFileName2);
+            File.Delete(logFileName3);
+
+            //initialize detector
+            detector = new VideoDetector(defaultFrameRate, defaultMaxNumFaces, defaultDetectorMode);
+            detector.setClassifierPath(defaultClassifierPath);
+
+            //initialize callback functions
+            pvd = new ProcessVideoFeed(detector, ShowMessage, WriteInfo1, WriteInfo2, WriteInfo3);
+            status = new Status(detector, ShowMessage, WriteInfo1);
+            tracker = new FaceTracker(detector, ShowMessage, WriteInfo1);
+
+            //set detector's options
+            detector.setDetectAllExpressions(true);
+            detector.setDetectAllEmotions(true);
+
+            //TO DO: make for appearances
+            //detector.setDetectAllAppearances(true);
+
+            //start and process detector
+            detector.start();
+            detector.process(defaultVideFileName);
+
+            //show some info
+            Console.Read();
+
+
+            //stop detector
+            detector.stop();
+
+            ShowMessage(String.Format("Video processing done! {0} frames were captured, {1} frames was processed", pvd.GetFrameCapturedCount(), pvd.GetFrameProcessedCount()));
+
+        }
+
 
         private static void ShowMessage(string message)
         {

@@ -18,21 +18,25 @@ namespace ProcessVideoFile
         private GetInfo WriteInfoExpressions;
         private GetInfo WriteInfoEmotions;
         private GetInfo WriteInfoFeaturePoints;
-        
 
         private int frameCapturedCounter = 0;
         private int frameProcessedCounter = 0;
+
         private bool isFirstFrame = true;
         const int longestWordLenght = 19; //this is based on expressions properties
 
+        private FaceData faceStates;
+
         public ProcessVideoFeed(VideoDetector detector,
-            GetInfo showMessage, GetInfo writeInfoExpressions, 
+            GetInfo showMessage, GetInfo writeInfoExpressions,
             GetInfo writeInfoEmotions, GetInfo writeInfoFeaturePoints)
         {
             ShowMessage = showMessage;
             WriteInfoExpressions = writeInfoExpressions;
             WriteInfoEmotions = writeInfoEmotions;
             WriteInfoFeaturePoints = writeInfoFeaturePoints;
+
+            faceStates = new FaceData();
 
             detector.setImageListener(this);
 
@@ -53,8 +57,12 @@ namespace ProcessVideoFile
                     Affdex.Face face = pair.Value;
                     StringBuilder output = new StringBuilder();
 
+                    faceStates.AddFace(face, frame.getTimestamp());
+                    
+
                     if (isFirstFrame)
                     {
+                        faceStates.SetFrameData(frame.getHeight(), frame.getWidth());
                         output.Append(string.Format("{0,5}{1,9}", "Frame", "TimeScale"));
                         foreach (PropertyInfo prop in typeof(Affdex.Expressions).GetProperties())
                         {
@@ -81,7 +89,7 @@ namespace ProcessVideoFile
 
                     //timescale and frame count output
                     output.Append(string.Format("{0,4}#{1,9:0.0000}", frameProcessedCounter, frame.getTimestamp()));
-                    
+
                     //expressions output
                     foreach (PropertyInfo prop in typeof(Affdex.Expressions).GetProperties())
                     {
@@ -114,6 +122,12 @@ namespace ProcessVideoFile
                     output.Append(Environment.NewLine);
                     WriteInfoEmotions(output.ToString());
 
+
+                    //TO DO: make handler for appearances
+
+
+
+
                     frameProcessedCounter++;
                 }
             }
@@ -128,6 +142,11 @@ namespace ProcessVideoFile
         public int GetFrameProcessedCount()
         {
             return frameProcessedCounter;
+        }
+
+        public FaceData GetFaceData()
+        {
+            return faceStates;
         }
     }
 }

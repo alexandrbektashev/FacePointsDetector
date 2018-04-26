@@ -57,6 +57,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,7 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analyser.cs" />
-    <Compile Include="FaceModel.cs" />
+    <Compile Include="FaceData.cs" />
     <Compile Include="FaceTracker.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="ProcessVideoFeed.cs" />
