@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Affdex;
 using System.Drawing;
+using System.Threading;
 
 
 namespace ProcessVideoFile
@@ -16,13 +17,17 @@ namespace ProcessVideoFile
         const uint defaultMaxNumFaces = 1;
         const FaceDetectorMode defaultDetectorMode = FaceDetectorMode.LARGE_FACES;
 
-        const string defaultClassifierPath = @"C:\Program Files\Affectiva\AffdexSDK\data";
-        const string defaultVideFileName = "video.mp4";
-
+        const string defaultClassifierPath = @"C:\Program Files\Affectiva\AffdexSDK\data";        
         const string logFileName = "Log.txt";
-        const string logFileName1 = "LogProcessedFileExpressions.txt";
-        const string logFileName2 = "LogProcessedFileEmotions.txt";
-        const string logFileName3 = "LogProcessedFileFeaturePoints.txt";
+
+//        static string defaultVideFileName = "video.mp4";
+        static string infoFileName1;
+        static string infoFileName2;
+        static string infoFileName3;
+
+        const string suffixExpressions = "_expressions.txt";
+        const string suffixEmotions = "_emotions.txt";
+        const string suffixFeaturePoints = "_featurepoints.txt";
 
         static VideoDetector detector;
         static ProcessVideoFeed pvd;
@@ -34,30 +39,51 @@ namespace ProcessVideoFile
         {
             try
             {
-                ProcessVideo();
+                //the upper level
+                
+                string[] filenames = Directory.GetFiles("C:\\TestExpressions");
 
-                Analyser analysis = new Analyser(pvd.GetFaceData());
+                foreach(string name in filenames)
+                {
+                    if (name.Contains(".mp4"))
+                    {
+                        Log(string.Format("Start processing video {0}", name));
 
-                ShowMessage(string.Format("{0} eye closures detected", analysis.EyeClosureCount()));
+                        ProcessVideo(name);
+
+                        Analyser analysis = new Analyser(pvd.GetFaceData());
+                        WriteInfo1(analysis.GetCountAll());
+
+                        Log(string.Format("Processing {0} done!", name));
+                    }
+                }
+                Log(string.Format("All done!"));
 
                 Console.ReadKey();
+                
 
             }
 
             catch (Exception ex)
             {
-                ShowMessage(ex.Message);
+                Log(ex.Message);
                 Console.ReadKey();
             }
 
         }
 
 
-        private static void ProcessVideo()
+        private static void ProcessVideo(string fileName)
         {
-            File.Delete(logFileName1);
-            File.Delete(logFileName2);
-            File.Delete(logFileName3);
+            string videoname = fileName.Split('.')[0];
+
+            infoFileName1 = videoname + suffixExpressions;
+            infoFileName2 = videoname + suffixEmotions;
+            infoFileName3 = videoname + suffixFeaturePoints;
+
+            File.Delete(infoFileName1);
+            File.Delete(infoFileName2);
+            File.Delete(infoFileName3);
 
             //initialize detector
             detector = new VideoDetector(defaultFrameRate, defaultMaxNumFaces, defaultDetectorMode);
@@ -77,19 +103,27 @@ namespace ProcessVideoFile
 
             //start and process detector
             detector.start();
-            detector.process(defaultVideFileName);
+            detector.process(fileName);
 
-            //show some info
-            Console.Read();
+            //wait until it all done
+            while (!status.IsReady)
+                Thread.Sleep(100);
 
 
             //stop detector
             detector.stop();
 
-            ShowMessage(String.Format("Video processing done! {0} frames were captured, {1} frames was processed", pvd.GetFrameCapturedCount(), pvd.GetFrameProcessedCount()));
+            Log(String.Format("Video processing done! {0} frames were captured, {1} frames was processed", pvd.GetFrameCapturedCount(), pvd.GetFrameProcessedCount()));
 
         }
 
+
+        private static void Log(string message)
+        {
+            message = string.Format("{0:15} {1}", DateTime.Now, message);
+            Console.WriteLine(message);
+            File.AppendAllText(logFileName, message);
+        }
 
         private static void ShowMessage(string message)
         {
@@ -98,17 +132,17 @@ namespace ProcessVideoFile
 
         private static void WriteInfo1(string info)
         {
-            File.AppendAllText(logFileName1, info);
+            File.AppendAllText(infoFileName1, info);
         }
 
         private static void WriteInfo2(string info)
         {
-            File.AppendAllText(logFileName2, info);
+            File.AppendAllText(infoFileName2, info);
         }
 
         private static void WriteInfo3(string info)
         {
-            File.AppendAllText(logFileName3, info);
+            File.AppendAllText(infoFileName3, info);
         }
 
     }

@@ -1,0 +1,2 @@
+FrameTimeScale#         Engagement#            Valence#           Contempt#           Surprise#              Anger#            Sadness#            Disgust#               Fear#                Joy
+   0#   0,0334#          0,0887865#          0,0000000#          0,1924907#          0,2017311#          0,0020635#          0,0230206#          0,4366992#          0,0045576#          0,0018883

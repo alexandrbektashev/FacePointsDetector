@@ -14,6 +14,8 @@ namespace ProcessVideoFile
         private GetInfo ShowMessage;
         private GetInfo WriteInfo;
 
+        public bool IsReady = false;
+
         public Status(VideoDetector detector, GetInfo showMessage, GetInfo writeInfo)
         {
 
@@ -33,7 +35,7 @@ namespace ProcessVideoFile
         {
             ShowMessage("Processing finished!");
             WriteInfo("Processing finished!");
-
+            IsReady = true;
         }
     }
 }
