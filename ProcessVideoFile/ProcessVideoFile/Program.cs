@@ -7,7 +7,7 @@ using System.IO;
 using Affdex;
 using System.Drawing;
 using System.Threading;
-
+using System.Reflection;
 
 namespace ProcessVideoFile
 {
@@ -40,10 +40,22 @@ namespace ProcessVideoFile
             try
             {
                 //the upper level
-                
-                string[] filenames = Directory.GetFiles("C:\\TestExpressions");
 
-                foreach(string name in filenames)
+                string[] boundsConfig = File.ReadAllLines("expressions.txt");
+
+
+
+                //Dictionary<string[], bool> samples = new Dictionary<string[], bool>();
+
+                //NaiveBayesClassifier classifier = new NaiveBayesClassifier(samples);
+
+                //ShowMessage(classifier.Predict(new string[] { "nose", "smile" }, out bool istrue).ToString());
+                //ShowMessage(istrue.ToString());
+
+                string[] filenames = Directory.GetFiles(@"C:\Users\aesth\Pictures\Camera Roll\test");
+                Dictionary<string, int> counter = new Dictionary<string, int>();
+
+                foreach (string name in filenames)
                 {
                     if (name.Contains(".mp4"))
                     {
@@ -51,12 +63,16 @@ namespace ProcessVideoFile
 
                         ProcessVideo(name);
 
-                        Analyser analysis = new Analyser(pvd.GetFaceData());
-                        WriteInfo1(analysis.GetCountAll());
-
+                        Analyser analysis = new Analyser(pvd.GetFaceData(), boundsConfig);
+                        counter = analysis.CountEverything();
                         Log(string.Format("Processing {0} done!", name));
                     }
                 }
+
+
+                foreach(string str in counter.Keys)
+                    Console.WriteLine("{0, 20} - {1,3}", str, counter[str]);
+
                 Log(string.Format("All done!"));
 
                 Console.ReadKey();
@@ -120,8 +136,8 @@ namespace ProcessVideoFile
 
         private static void Log(string message)
         {
-            message = string.Format("{0:15} {1}", DateTime.Now, message);
-            Console.WriteLine(message);
+            message = string.Format("{0} {1}{2}", DateTime.Now, message, Environment.NewLine);
+            Console.Write(message);
             File.AppendAllText(logFileName, message);
         }
 

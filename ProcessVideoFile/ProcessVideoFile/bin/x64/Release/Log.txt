@@ -1,0 +1,15 @@
+02.05.2018 12:38:32 Start processing video C:\TestExpressions\attention.mp4
+02.05.2018 12:39:10 Video processing done! 676 frames were captured, 573 frames was processed
+02.05.2018 12:39:10 Processing C:\TestExpressions\attention.mp4 done!
+02.05.2018 12:39:10 Start processing video C:\TestExpressions\attention2.mp4
+02.05.2018 12:39:20 Video processing done! 184 frames were captured, 173 frames was processed
+02.05.2018 12:39:20 Processing C:\TestExpressions\attention2.mp4 done!
+02.05.2018 12:39:20 Start processing video C:\TestExpressions\BrowFurrow.mp4
+02.05.2018 17:20:59 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180502_17_06_08_Pro.mp4
+02.05.2018 17:21:54 Video processing done! 180 frames were captured, 98 frames was processed
+02.05.2018 17:21:54 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180502_17_06_08_Pro.mp4 done!
+02.05.2018 17:21:54 All done!
+02.05.2018 18:23:52 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180502_17_06_08_Pro.mp4
+02.05.2018 18:24:05 Video processing done! 180 frames were captured, 98 frames was processed
+02.05.2018 18:24:06 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180502_17_06_08_Pro.mp4 done!
+02.05.2018 18:24:06 All done!

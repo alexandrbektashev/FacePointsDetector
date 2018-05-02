@@ -69,6 +69,7 @@
     <Compile Include="Analyser.cs" />
     <Compile Include="FaceData.cs" />
     <Compile Include="FaceTracker.cs" />
+    <Compile Include="NaiveBayesClassifier.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="ProcessVideoFeed.cs" />
     <Compile Include="Program.cs" />

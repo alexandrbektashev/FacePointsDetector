@@ -10,3 +10,15 @@ C:\Users\aesth\source\repos\AffdexSampleApp\ProcessVideoFile\ProcessVideoFile\ob
 C:\Users\aesth\source\repos\AffdexSampleApp\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\affdex-native.dll
 C:\Users\aesth\source\repos\AffdexSampleApp\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\opencv_ffmpeg248_64.dll
 C:\Users\aesth\source\repos\AffdexSampleApp\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\tensorflow.dll
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\affdex-native.dll
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\opencv_ffmpeg248_64.dll
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\tensorflow.dll
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\ProcessVideoFile.exe.config
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\ProcessVideoFile.exe
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\ProcessVideoFile.pdb
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\Affdex.dll
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\obj\x64\Release\ProcessVideoFile.csprojResolveAssemblyReference.cache
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\obj\x64\Release\ProcessVideoFile.csproj.CoreCompileInputs.cache
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\obj\x64\Release\ProcessVideoFile.csproj.CopyComplete
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\obj\x64\Release\ProcessVideoFile.exe
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\obj\x64\Release\ProcessVideoFile.pdb
