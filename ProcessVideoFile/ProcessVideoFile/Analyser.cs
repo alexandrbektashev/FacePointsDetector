@@ -125,7 +125,14 @@ namespace ProcessVideoFile
 
         public string[] BayesNaiveInfo1()
         {
-            return null;
+            Dictionary<string, int> dict = CountEverything();
+
+            List<string> info = new List<string>();
+
+            foreach (string key in dict.Keys)
+                if (dict[key] > 0) info.Add(key);
+
+            return info.ToArray();
         }
 
     }

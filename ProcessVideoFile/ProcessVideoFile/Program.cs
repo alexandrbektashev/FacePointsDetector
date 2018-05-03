@@ -43,17 +43,9 @@ namespace ProcessVideoFile
 
                 string[] boundsConfig = File.ReadAllLines("expressions.txt");
 
+                string[] filenames = Directory.GetFiles(@"C:\Users\aesth\Pictures\Camera Roll\samples");
 
-
-                //Dictionary<string[], bool> samples = new Dictionary<string[], bool>();
-
-                //NaiveBayesClassifier classifier = new NaiveBayesClassifier(samples);
-
-                //ShowMessage(classifier.Predict(new string[] { "nose", "smile" }, out bool istrue).ToString());
-                //ShowMessage(istrue.ToString());
-
-                string[] filenames = Directory.GetFiles(@"C:\Users\aesth\Pictures\Camera Roll\test");
-                Dictionary<string, int> counter = new Dictionary<string, int>();
+                Dictionary<string, int> counter = new Dictionary<string, int>();                              
 
                 foreach (string name in filenames)
                 {
@@ -66,12 +58,12 @@ namespace ProcessVideoFile
                         Analyser analysis = new Analyser(pvd.GetFaceData(), boundsConfig);
                         counter = analysis.CountEverything();
                         Log(string.Format("Processing {0} done!", name));
+                        foreach (string str in counter.Keys)
+                            WriteInfo1(string.Format("{0, 20} - {1,3}", str, counter[str]));
                     }
                 }
 
 
-                foreach(string str in counter.Keys)
-                    Console.WriteLine("{0, 20} - {1,3}", str, counter[str]);
 
                 Log(string.Format("All done!"));
 
