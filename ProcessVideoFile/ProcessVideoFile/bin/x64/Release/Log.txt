@@ -146,3 +146,8 @@ Source: __cdecl FileVideoCapture::FileVideoCapture(const class boost::filesystem
 04.05.2018 18:17:33 Пустое имя пути не допускается.
 04.05.2018 18:18:24 Пустое имя пути не допускается.
 04.05.2018 18:27:57 Входная строка имела неверный формат.
+04.05.2018 23:11:35 Файл 'C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\input.txt' не найден.
+04.05.2018 23:12:32 Is true - False; Lie probability - 0,852275246783048
+04.05.2018 23:13:36 Is true - False; Lie probability - 0,852275246783048
+04.05.2018 23:16:03 Is true - False; Lie probability - 0,852275246783048
+04.05.2018 23:16:56 Is true - False; Lie probability - 0,852275246783048

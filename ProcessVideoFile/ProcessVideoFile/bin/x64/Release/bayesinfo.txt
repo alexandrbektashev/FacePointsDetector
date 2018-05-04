@@ -1,0 +1,40 @@
+Classifier settings:
+Dc lie =    13; Dc truth =     8
+Lc lie =   296; Lc truth =   157
+V      =    22; D        =    21
+               Type	  Lie	Truth
+            JawDrop	    8	    3
+            Dimpler	   20	   10
+           EyeWiden	   25	    6
+          Attention	   58	   17
+         EyeClosure	   12	    6
+              Smirk	    3	    5
+            LipSuck	   11	    8
+           LipPress	   29	   12
+          LipPucker	    2	    2
+          ChinRaise	   22	   14
+          BrowRaise	    7	    3
+                   	   26	   16
+         LidTighten	    9	    2
+         BrowFurrow	   10	    4
+     InnerBrowRaise	    7	    3
+          MouthOpen	   16	   17
+        NoseWrinkle	    5	    7
+         LipStretch	   13	   10
+         CheekRaise	    1	    2
+              Smile	    7	    4
+ LipCornerDepressor	    0	    1
+      UpperLipRaise	    5	    5
+Calculations:
+For truth:
+Dt = log(DcTruth/D) + Sum(wic + 1)/(V + LcTruth))
+Dt = -0,965  -4,089 -3,241 -3,241 -2,297 -3,241 -2,297 -3,108=-22,48025
+
+For lie:
+Dl = log(DcLie/D) + Sum(wic + 1)/(V + LcLie))
+Dl = -0,480  -3,459 -2,504 -2,504 -1,685 -3,197 -2,929 -3,970=-20,72769
+
+-22,48025 < -20,72769
+Lie is more possible
+Probability for truth - 0,15
+Probability for lie - 0,85

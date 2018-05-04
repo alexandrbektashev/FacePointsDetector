@@ -49,9 +49,10 @@ namespace ProcessVideoFile
                 string outputBayesInfoFile = null;
                 string expressionsConfigFname = null;
                 string inputBayesInfoFile = null;
+                string inputPredictFile = null;
+
 
                 bool countExpressions = false;
-                bool naiveBayesFullInfo = false;
 
                 var p = new OptionSet()
 
@@ -60,8 +61,8 @@ namespace ProcessVideoFile
                     { "s|SamplesVideoPath=", "the {NAME} of sample videos to train classifier", v => folderSamplesPath = v },
                     { "o|OutputBayesInfoFile=", "{NAME} file to write all output classifier data", v => outputBayesInfoFile = v },
                     { "i|InputBayesInfoFile=", "{NAME} file to write all input classifier data", v => inputBayesInfoFile = v },
+                    { "t|InputPredictFile=", "{NAME} file to input into classifier data to predict already gathered data", v => inputPredictFile = v },
                     { "c|CountExpressions=",  "writes counted expressions", v => countExpressions = v != null },
-                    { "f|NaiveBayesFullInfo=", "shows full train input and output for classifier", v => naiveBayesFullInfo = v != null },
                     { "e|ExpressionsConfig=", string.Format( "path of file expressions config file. Default is .\\{0}", defaultExpressionsConfigfile),
                         v => expressionsConfigFname = v},
                     { "h|help",  "show this message and exit", v => show_help = v != null }
@@ -85,7 +86,7 @@ namespace ProcessVideoFile
 
                 if (folderSamplesPath != null)
                 {
-                    
+
                     string[] filenames = null;
                     if (Directory.Exists(folderSamplesPath)) filenames = Directory.GetFiles(folderSamplesPath);
                     else throw new Exception("Directory not found");
@@ -121,38 +122,47 @@ namespace ProcessVideoFile
                     Console.ReadKey();
                 }
 
-
+                string[] videoPredictInput = null;
 
                 if (videoToPredict != null)
                 {
-                    if ((samples == null) && (samplesBool == null))
-                        if (inputBayesInfoFile != null)
-                        {
-                            string[] lines = File.ReadAllLines(inputBayesInfoFile);
-                            samples = new List<string[]>();
-                            samplesBool = new List<bool>();
+                    ProcessVideo(videoToPredict);
 
-                            foreach (string line in lines)
-                            {
-                                string[] keywords = line.Split(' ');
-                                samplesBool.Add(bool.Parse(keywords[0]));
-                                Array.Copy(keywords, 1, keywords, 0, keywords.Length - 1);
-                                samples.Add(keywords);
-                            }
-                                
+                    Analyser a = new Analyser(pvd.GetFaceData(), boundsConfig);
+                    videoPredictInput = a.BayesNaiveInfo1();
+                }
+
+
+
+                if ((samples == null) && (samplesBool == null))
+                    if (inputBayesInfoFile != null)
+                    {
+                        string[] lines = File.ReadAllLines(inputBayesInfoFile);
+                        samples = new List<string[]>();
+                        samplesBool = new List<bool>();
+
+                        foreach (string line in lines)
+                        {
+                            string[] keywords = line.Split(' ');
+                            samplesBool.Add(bool.Parse(keywords[0]));
+                            Array.Copy(keywords, 1, keywords, 0, keywords.Length - 1);
+                            samples.Add(keywords);
                         }
 
+                    }
+
+                if ((videoPredictInput == null) && (inputPredictFile != null))
+                    videoPredictInput = File.ReadAllText(inputPredictFile).Split(' ');
+
+                if (videoPredictInput != null)
+                {
                     NaiveBayesClassifier classifier = new NaiveBayesClassifier(samples, samplesBool);
-
-                     
-
-                    ProcessVideo(videoToPredict);
-                    Analyser a = new Analyser(pvd.GetFaceData(), boundsConfig);
-
-                    double prob = classifier.Predict(a.BayesNaiveInfo1(), out bool isrock);
-                    Console.WriteLine("{0} {1}", isrock, prob);
+                    if (outputBayesInfoFile != null) File.WriteAllText(outputBayesInfoFile, classifier.GetInfo());
+                    string data = classifier.Predict(videoPredictInput, out bool istrue, out double probability);
+                    ShowMessage(string.Format("Is true - {0}; Lie probability - {1}", istrue, probability));
+                    if (outputBayesInfoFile != null) File.AppendAllText(outputBayesInfoFile, data);
                 }
-                Console.Read();
+                Console.WriteLine("All done!");
             }
             catch (OptionException e)
             {
