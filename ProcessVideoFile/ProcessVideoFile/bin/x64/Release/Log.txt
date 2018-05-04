@@ -145,3 +145,4 @@ Source: __cdecl FileVideoCapture::FileVideoCapture(const class boost::filesystem
 04.05.2018 16:54:58 Video processing done! 125 frames were captured, 64 frames was processed
 04.05.2018 18:17:33 Пустое имя пути не допускается.
 04.05.2018 18:18:24 Пустое имя пути не допускается.
+04.05.2018 18:27:57 Входная строка имела неверный формат.

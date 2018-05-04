@@ -19,25 +19,28 @@ namespace ProcessVideoFile
         private double V;
         private double D;
 
-        public NaiveBayesClassifier(Dictionary<string[], bool> trainSamples)
+        public NaiveBayesClassifier(List<string[]> trainSamples, List<bool> trainSamplesBool)
         {
 
-            Train(trainSamples);
+            Train(trainSamples, trainSamplesBool);
 
         }
 
-        private void Train(Dictionary<string[], bool> trainSamples)
+        private void Train(List<string[]> trainSamples, List<bool> trainSamplesBool)
         {
             //espessially this method
 
             freqLieWic = new Dictionary<string, int>();
             freqTruthWic = new Dictionary<string, int>();
+
             actions = new List<string>();
             DcLie = DcTruth = V = LcLie = LcTruth = D = 0; //за это меня следует убить
             D = trainSamples.Count;
 
-            foreach (string[] attributes in trainSamples.Keys)
-                if (trainSamples[attributes])
+            for (int i = 0; i < 0; i++)
+            {
+                string[] attributes = trainSamples[i];
+                if (trainSamplesBool[i])
                 {
                     DcTruth++;
                     foreach (string atr in attributes)
@@ -58,8 +61,8 @@ namespace ProcessVideoFile
                         else freqLieWic.Add(atr, 1);
                         if (!actions.Contains(atr)) actions.Add(atr);
                     }
-
                 }
+            }
             V = actions.Count;
             LcLie = freqLieWic.Sum(x => x.Value);
             LcTruth = freqTruthWic.Sum(x => x.Value);

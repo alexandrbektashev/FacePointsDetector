@@ -35,6 +35,9 @@ namespace ProcessVideoFile
         static Status status;
         static FaceTracker tracker;
 
+        static bool writeExpressions = true;
+        static bool writeEmotions = false;
+        static bool writeFeaturePoints = false;
 
         static void Main(string[] args)
         {
@@ -45,53 +48,50 @@ namespace ProcessVideoFile
                 string folderSamplesPath = null;
                 string outputBayesInfoFile = null;
                 string expressionsConfigFname = null;
-
+                string inputBayesInfoFile = null;
 
                 bool countExpressions = false;
-                bool naiveBayesInput = false;
                 bool naiveBayesFullInfo = false;
 
                 var p = new OptionSet()
 
                 {
                     { "p|PredictVideo=", "the {NAME} of video to predict", v => videoToPredict = v },
-                    { "s|SamplesVideoPath=", "the {NAME} of sample videos to train classifier", v => videoToPredict = v },
-                    { "o|OutputBayesInfoFile=", "output file to write all classifier data", v => outputBayesInfoFile = v },
+                    { "s|SamplesVideoPath=", "the {NAME} of sample videos to train classifier", v => folderSamplesPath = v },
+                    { "o|OutputBayesInfoFile=", "{NAME} file to write all output classifier data", v => outputBayesInfoFile = v },
+                    { "i|InputBayesInfoFile=", "{NAME} file to write all input classifier data", v => inputBayesInfoFile = v },
                     { "c|CountExpressions=",  "writes counted expressions", v => countExpressions = v != null },
-                    { "n|NaiveBayesInput=",  "writes what was received by naive Bayes classifier", v => naiveBayesInput = v != null },
                     { "f|NaiveBayesFullInfo=", "shows full train input and output for classifier", v => naiveBayesFullInfo = v != null },
-                    { "e|ExpressionsConfig=", string.Format( "the path to expressions config file. Default is .\\{0}", defaultExpressionsConfigfile),
+                    { "e|ExpressionsConfig=", string.Format( "path of file expressions config file. Default is .\\{0}", defaultExpressionsConfigfile),
                         v => expressionsConfigFname = v},
-                //{ "r|repeat=", "this must be an integer.", (int v) => repeat = v },
-                //{ "t|type=", "trial type: date or times", v => {
-                //if (v == "date") DateOrTimes = true;
-                //else if (v == "times") DateOrTimes = false;
-                //else throw new OptionException("Wrong parameter value", "t|type="); } },
                     { "h|help",  "show this message and exit", v => show_help = v != null }
                 };
 
                 p.Parse(args);
-         
+
                 if (show_help)
                 {
                     ShowHelp(p);
                     return;
                 }
 
-                Dictionary<string[], bool> samples = new Dictionary<string[], bool>();
+                List<string[]> samples = null;
+                List<bool> samplesBool = null;
                 string[] boundsConfig;
                 if (expressionsConfigFname != null)
                     boundsConfig = File.ReadAllLines(expressionsConfigFname);
                 else
                     boundsConfig = File.ReadAllLines(defaultExpressionsConfigfile);
 
-
                 if (folderSamplesPath != null)
                 {
-
+                    
                     string[] filenames = null;
-                    if (!Directory.Exists(folderSamplesPath)) filenames = Directory.GetFiles(folderSamplesPath);
-                    if (filenames == null) throw new Exception("No samples found");
+                    if (Directory.Exists(folderSamplesPath)) filenames = Directory.GetFiles(folderSamplesPath);
+                    else throw new Exception("Directory not found");
+
+                    samples = new List<string[]>();
+                    samplesBool = new List<bool>();
 
                     foreach (string name in filenames)
                     {
@@ -102,34 +102,54 @@ namespace ProcessVideoFile
                             ProcessVideo(name);
 
                             Analyser analysis = new Analyser(pvd.GetFaceData(), boundsConfig);
-                            if (countExpressions) counter = analysis.CountEverything();
+                            if (countExpressions) WriteInfo1(analysis.CountedExpressions());
 
                             string[] arr = analysis.BayesNaiveInfo1();
 
-                            if (name.Contains("true")) samples.Add(arr, true);
-                            else samples.Add(arr, false);
+                            samples.Add(arr);
+                            if (name.Contains("true")) samplesBool.Add(true);
+                            else samplesBool.Add(false);
 
                             Log(string.Format("Processing {0} done!", name));
-                            foreach (string str in arr)
-                                WriteInfo1(str + " ");
                         }
                     }
+                    if (inputBayesInfoFile != null)
+                        for (int i = 0; i < samples.Count; i++)
+                            File.AppendAllText(inputBayesInfoFile, string.Format("{0}{1}{2}", samplesBool[i], ToTextLine(samples[i]), Environment.NewLine));
 
-                    Log(string.Format("All done!"));
+                    Log(string.Format("All samples done!"));
+                    Console.ReadKey();
                 }
-                Console.ReadKey();
+
+
 
                 if (videoToPredict != null)
                 {
-                    Console.WriteLine("Going to predict");
+                    if ((samples == null) && (samplesBool == null))
+                        if (inputBayesInfoFile != null)
+                        {
+                            string[] lines = File.ReadAllLines(inputBayesInfoFile);
+                            samples = new List<string[]>();
+                            samplesBool = new List<bool>();
 
-                    NaiveBayesClassifier classifier = new NaiveBayesClassifier(samples);
+                            foreach (string line in lines)
+                            {
+                                string[] keywords = line.Split(' ');
+                                samplesBool.Add(bool.Parse(keywords[0]));
+                                Array.Copy(keywords, 1, keywords, 0, keywords.Length - 1);
+                                samples.Add(keywords);
+                            }
+                                
+                        }
 
-                    string fname = @"C:\Users\aesth\Pictures\Camera Roll\test.mp4";
-                    ProcessVideo(fname);
+                    NaiveBayesClassifier classifier = new NaiveBayesClassifier(samples, samplesBool);
+
+                     
+
+                    ProcessVideo(videoToPredict);
                     Analyser a = new Analyser(pvd.GetFaceData(), boundsConfig);
-                    double prob = classifier.Predict(a.BayesNaiveInfo1(), out bool isrock);
 
+                    double prob = classifier.Predict(a.BayesNaiveInfo1(), out bool isrock);
                     Console.WriteLine("{0} {1}", isrock, prob);
                 }
                 Console.Read();
@@ -179,7 +199,7 @@ namespace ProcessVideoFile
             //initialize callback functions
             pvd = new ProcessVideoFeed(detector, ShowMessage, WriteInfo1, WriteInfo2, WriteInfo3);
             status = new Status(detector, ShowMessage, WriteInfo1);
-            tracker = new FaceTracker(detector, ShowMessage, WriteInfo1);
+            //tracker = new FaceTracker(detector, ShowMessage, WriteInfo1);
 
             //set detector's options
             detector.setDetectAllExpressions(true);
@@ -219,17 +239,25 @@ namespace ProcessVideoFile
 
         private static void WriteInfo1(string info)
         {
-            File.AppendAllText(infoFileName1, info);
+            if (writeExpressions) File.AppendAllText(infoFileName1, info);
         }
 
         private static void WriteInfo2(string info)
         {
-            File.AppendAllText(infoFileName2, info);
+            if (writeEmotions) File.AppendAllText(infoFileName2, info);
         }
 
         private static void WriteInfo3(string info)
         {
-            File.AppendAllText(infoFileName3, info);
+            if (writeFeaturePoints) File.AppendAllText(infoFileName3, info);
+        }
+
+        private static string ToTextLine(string[] arr)
+        {
+            StringBuilder str = new StringBuilder();
+            foreach (var s in arr)
+                str.Append(" " + s);
+            return str.ToString();
         }
 
     }

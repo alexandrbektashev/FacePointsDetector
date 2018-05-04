@@ -130,10 +130,22 @@ namespace ProcessVideoFile
             List<string> info = new List<string>();
 
             foreach (string key in dict.Keys)
-                if (dict[key] > 0) info.Add(key);
-
+            {
+                int c = dict[key];
+                for (int i = 0; i < c; i++)
+                    info.Add(key);
+            }
             return info.ToArray();
         }
 
+        public string CountedExpressions()
+        {
+            StringBuilder str = new StringBuilder();
+            Dictionary<string, int> nums = CountEverything();
+            foreach (string key in nums.Keys)
+                str.Append(string.Format("{0,20}-{1,3}{2}", key, nums[key], Environment.NewLine));
+            return str.ToString();
+
+        }
     }
 }
