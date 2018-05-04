@@ -57,12 +57,12 @@ namespace ProcessVideoFile
                     if (!counter.Keys.Contains(prop.Name))
                         counter.Add(prop.Name, 0);
 
-                    double valueFrame = Convert.ToDouble( (float)prop.GetValue(face.Expressions, null));
+                    double valueFrame = Convert.ToDouble((float)prop.GetValue(face.Expressions, null));
                     double valueBound = bounds[prop.Name];
                     bool ison = isOn[prop.Name];
 
 
-                    if ((valueFrame > valueBound) && ison )
+                    if ((valueFrame > valueBound) && ison)
                     {
                         counter[prop.Name]++;
                         isOn[prop.Name] = false;
@@ -116,7 +116,7 @@ namespace ProcessVideoFile
                 rectf = new Rectangle(p, new Size(20, 20));
                 g.DrawString(point.Id.ToString(), new Font("Tahoma", 8), Brushes.Black, rectf);
 
-            }           
+            }
 
             g.Flush();
 

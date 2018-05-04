@@ -22,3 +22,4 @@ C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\obj\x
 C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\obj\x64\Release\ProcessVideoFile.csproj.CopyComplete
 C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\obj\x64\Release\ProcessVideoFile.exe
 C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\obj\x64\Release\ProcessVideoFile.pdb
+C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\NDesk.Options.dll

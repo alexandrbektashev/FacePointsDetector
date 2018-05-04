@@ -13,3 +13,135 @@
 02.05.2018 18:24:05 Video processing done! 180 frames were captured, 98 frames was processed
 02.05.2018 18:24:06 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180502_17_06_08_Pro.mp4 done!
 02.05.2018 18:24:06 All done!
+04.05.2018 16:40:17 All done!
+04.05.2018 16:41:05 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4
+04.05.2018 16:41:24 Video processing done! 159 frames were captured, 80 frames was processed
+04.05.2018 16:41:24 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4 done!
+04.05.2018 16:41:25 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4
+04.05.2018 16:41:30 Video processing done! 134 frames were captured, 68 frames was processed
+04.05.2018 16:41:30 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4 done!
+04.05.2018 16:41:31 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4
+04.05.2018 16:41:36 Video processing done! 122 frames were captured, 61 frames was processed
+04.05.2018 16:41:36 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4 done!
+04.05.2018 16:41:36 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4
+04.05.2018 16:41:44 Video processing done! 180 frames were captured, 91 frames was processed
+04.05.2018 16:41:44 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4 done!
+04.05.2018 16:41:44 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4
+04.05.2018 16:41:52 Video processing done! 195 frames were captured, 99 frames was processed
+04.05.2018 16:41:52 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4 done!
+04.05.2018 16:41:52 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4
+04.05.2018 16:42:03 Video processing done! 236 frames were captured, 119 frames was processed
+04.05.2018 16:42:03 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4 done!
+04.05.2018 16:42:04 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4
+04.05.2018 16:42:18 Video processing done! 350 frames were captured, 177 frames was processed
+04.05.2018 16:42:18 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4 done!
+04.05.2018 16:42:18 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4
+04.05.2018 16:42:28 Video processing done! 252 frames were captured, 128 frames was processed
+04.05.2018 16:42:28 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4 done!
+04.05.2018 16:42:29 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4
+04.05.2018 16:42:36 Video processing done! 167 frames were captured, 85 frames was processed
+04.05.2018 16:42:36 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4 done!
+04.05.2018 16:42:36 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4
+04.05.2018 16:42:45 Video processing done! 229 frames were captured, 115 frames was processed
+04.05.2018 16:42:45 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4 done!
+04.05.2018 16:42:46 All done!
+04.05.2018 16:43:20 File does not exist: C:\Users\aesth\Pictures\Camera Rolltest.mp4
+Source: __cdecl FileVideoCapture::FileVideoCapture(const class boost::filesystem::path &,const float)(c:\jenkins\workspace\affdexface-sdk-win64\src\modules\utils\filevideocapture.cpp LINE 10)
+04.05.2018 16:43:52 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4
+04.05.2018 16:44:03 Video processing done! 159 frames were captured, 80 frames was processed
+04.05.2018 16:44:03 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4 done!
+04.05.2018 16:44:03 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4
+04.05.2018 16:44:08 Video processing done! 134 frames were captured, 68 frames was processed
+04.05.2018 16:44:09 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4 done!
+04.05.2018 16:44:09 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4
+04.05.2018 16:44:14 Video processing done! 122 frames were captured, 61 frames was processed
+04.05.2018 16:44:14 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4 done!
+04.05.2018 16:44:14 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4
+04.05.2018 16:44:21 Video processing done! 180 frames were captured, 91 frames was processed
+04.05.2018 16:44:21 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4 done!
+04.05.2018 16:44:22 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4
+04.05.2018 16:44:30 Video processing done! 195 frames were captured, 99 frames was processed
+04.05.2018 16:44:30 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4 done!
+04.05.2018 16:44:30 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4
+04.05.2018 16:44:39 Video processing done! 236 frames were captured, 119 frames was processed
+04.05.2018 16:44:39 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4 done!
+04.05.2018 16:44:39 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4
+04.05.2018 16:44:53 Video processing done! 350 frames were captured, 177 frames was processed
+04.05.2018 16:44:53 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4 done!
+04.05.2018 16:44:53 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4
+04.05.2018 16:45:03 Video processing done! 252 frames were captured, 128 frames was processed
+04.05.2018 16:45:03 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4 done!
+04.05.2018 16:45:03 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4
+04.05.2018 16:45:10 Video processing done! 167 frames were captured, 85 frames was processed
+04.05.2018 16:45:10 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4 done!
+04.05.2018 16:45:10 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4
+04.05.2018 16:45:19 Video processing done! 229 frames were captured, 115 frames was processed
+04.05.2018 16:45:19 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4 done!
+04.05.2018 16:45:19 All done!
+04.05.2018 16:45:35 Video processing done! 125 frames were captured, 64 frames was processed
+04.05.2018 16:48:45 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4
+04.05.2018 16:48:56 Video processing done! 159 frames were captured, 80 frames was processed
+04.05.2018 16:48:56 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4 done!
+04.05.2018 16:48:56 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4
+04.05.2018 16:49:02 Video processing done! 134 frames were captured, 68 frames was processed
+04.05.2018 16:49:02 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4 done!
+04.05.2018 16:49:02 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4
+04.05.2018 16:49:07 Video processing done! 122 frames were captured, 61 frames was processed
+04.05.2018 16:49:07 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4 done!
+04.05.2018 16:49:07 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4
+04.05.2018 16:49:14 Video processing done! 180 frames were captured, 91 frames was processed
+04.05.2018 16:49:14 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4 done!
+04.05.2018 16:49:15 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4
+04.05.2018 16:49:22 Video processing done! 195 frames were captured, 99 frames was processed
+04.05.2018 16:49:22 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4 done!
+04.05.2018 16:49:23 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4
+04.05.2018 16:49:32 Video processing done! 236 frames were captured, 119 frames was processed
+04.05.2018 16:49:32 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4 done!
+04.05.2018 16:49:32 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4
+04.05.2018 16:49:47 Video processing done! 350 frames were captured, 177 frames was processed
+04.05.2018 16:49:47 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4 done!
+04.05.2018 16:49:47 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4
+04.05.2018 16:49:59 Video processing done! 252 frames were captured, 128 frames was processed
+04.05.2018 16:49:59 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4 done!
+04.05.2018 16:49:59 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4
+04.05.2018 16:50:06 Video processing done! 167 frames were captured, 85 frames was processed
+04.05.2018 16:50:06 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4 done!
+04.05.2018 16:50:06 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4
+04.05.2018 16:50:16 Video processing done! 229 frames were captured, 115 frames was processed
+04.05.2018 16:50:16 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4 done!
+04.05.2018 16:50:16 All done!
+04.05.2018 16:51:35 Video processing done! 125 frames were captured, 64 frames was processed
+04.05.2018 16:53:00 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4
+04.05.2018 16:53:11 Video processing done! 159 frames were captured, 80 frames was processed
+04.05.2018 16:53:11 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4 done!
+04.05.2018 16:53:11 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4
+04.05.2018 16:53:16 Video processing done! 134 frames were captured, 68 frames was processed
+04.05.2018 16:53:16 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4 done!
+04.05.2018 16:53:16 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4
+04.05.2018 16:53:21 Video processing done! 122 frames were captured, 61 frames was processed
+04.05.2018 16:53:22 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4 done!
+04.05.2018 16:53:22 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4
+04.05.2018 16:53:29 Video processing done! 180 frames were captured, 91 frames was processed
+04.05.2018 16:53:29 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4 done!
+04.05.2018 16:53:29 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4
+04.05.2018 16:53:36 Video processing done! 195 frames were captured, 99 frames was processed
+04.05.2018 16:53:36 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4 done!
+04.05.2018 16:53:36 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4
+04.05.2018 16:53:45 Video processing done! 236 frames were captured, 119 frames was processed
+04.05.2018 16:53:45 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4 done!
+04.05.2018 16:53:45 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4
+04.05.2018 16:53:58 Video processing done! 350 frames were captured, 177 frames was processed
+04.05.2018 16:53:58 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4 done!
+04.05.2018 16:53:58 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4
+04.05.2018 16:54:08 Video processing done! 252 frames were captured, 128 frames was processed
+04.05.2018 16:54:08 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4 done!
+04.05.2018 16:54:08 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4
+04.05.2018 16:54:14 Video processing done! 167 frames were captured, 85 frames was processed
+04.05.2018 16:54:15 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4 done!
+04.05.2018 16:54:15 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4
+04.05.2018 16:54:23 Video processing done! 229 frames were captured, 115 frames was processed
+04.05.2018 16:54:23 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4 done!
+04.05.2018 16:54:23 All done!
+04.05.2018 16:54:58 Video processing done! 125 frames were captured, 64 frames was processed
+04.05.2018 18:17:33 Пустое имя пути не допускается.
+04.05.2018 18:18:24 Пустое имя пути не допускается.

@@ -8,6 +8,7 @@ using Affdex;
 using System.Drawing;
 using System.Threading;
 using System.Reflection;
+using NDesk.Options;
 
 namespace ProcessVideoFile
 {
@@ -17,10 +18,10 @@ namespace ProcessVideoFile
         const uint defaultMaxNumFaces = 1;
         const FaceDetectorMode defaultDetectorMode = FaceDetectorMode.LARGE_FACES;
 
-        const string defaultClassifierPath = @"C:\Program Files\Affectiva\AffdexSDK\data";        
+        const string defaultClassifierPath = @"C:\Program Files\Affectiva\AffdexSDK\data";
+        const string defaultExpressionsConfigfile = "expressions.txt";
         const string logFileName = "Log.txt";
 
-//        static string defaultVideFileName = "video.mp4";
         static string infoFileName1;
         static string infoFileName2;
         static string infoFileName3;
@@ -39,39 +40,106 @@ namespace ProcessVideoFile
         {
             try
             {
-                //the upper level
+                bool show_help = false;
+                string videoToPredict = null;
+                string folderSamplesPath = null;
+                string outputBayesInfoFile = null;
+                string expressionsConfigFname = null;
 
-                string[] boundsConfig = File.ReadAllLines("expressions.txt");
 
-                string[] filenames = Directory.GetFiles(@"C:\Users\aesth\Pictures\Camera Roll\samples");
+                bool countExpressions = false;
+                bool naiveBayesInput = false;
+                bool naiveBayesFullInfo = false;
 
-                Dictionary<string, int> counter = new Dictionary<string, int>();                              
+                var p = new OptionSet()
 
-                foreach (string name in filenames)
                 {
-                    if (name.Contains(".mp4"))
-                    {
-                        Log(string.Format("Start processing video {0}", name));
+                    { "p|PredictVideo=", "the {NAME} of video to predict", v => videoToPredict = v },
+                    { "s|SamplesVideoPath=", "the {NAME} of sample videos to train classifier", v => videoToPredict = v },
+                    { "o|OutputBayesInfoFile=", "output file to write all classifier data", v => outputBayesInfoFile = v },
+                    { "c|CountExpressions=",  "writes counted expressions", v => countExpressions = v != null },
+                    { "n|NaiveBayesInput=",  "writes what was received by naive Bayes classifier", v => naiveBayesInput = v != null },
+                    { "f|NaiveBayesFullInfo=", "shows full train input and output for classifier", v => naiveBayesFullInfo = v != null },
+                    { "e|ExpressionsConfig=", string.Format( "the path to expressions config file. Default is .\\{0}", defaultExpressionsConfigfile),
+                        v => expressionsConfigFname = v},
+                //{ "r|repeat=", "this must be an integer.", (int v) => repeat = v },
+                //{ "t|type=", "trial type: date or times", v => {
+                //if (v == "date") DateOrTimes = true;
+                //else if (v == "times") DateOrTimes = false;
+                //else throw new OptionException("Wrong parameter value", "t|type="); } },
+                    { "h|help",  "show this message and exit", v => show_help = v != null }
+                };
 
-                        ProcessVideo(name);
-
-                        Analyser analysis = new Analyser(pvd.GetFaceData(), boundsConfig);
-                        counter = analysis.CountEverything();
-                        Log(string.Format("Processing {0} done!", name));
-                        foreach (string str in counter.Keys)
-                            WriteInfo1(string.Format("{0, 20} - {1,3}", str, counter[str]));
-                    }
+                p.Parse(args);
+         
+                if (show_help)
+                {
+                    ShowHelp(p);
+                    return;
                 }
 
+                Dictionary<string[], bool> samples = new Dictionary<string[], bool>();
+                string[] boundsConfig;
+                if (expressionsConfigFname != null)
+                    boundsConfig = File.ReadAllLines(expressionsConfigFname);
+                else
+                    boundsConfig = File.ReadAllLines(defaultExpressionsConfigfile);
 
 
-                Log(string.Format("All done!"));
+                if (folderSamplesPath != null)
+                {
 
+                    string[] filenames = null;
+                    if (!Directory.Exists(folderSamplesPath)) filenames = Directory.GetFiles(folderSamplesPath);
+                    if (filenames == null) throw new Exception("No samples found");
+
+                    foreach (string name in filenames)
+                    {
+                        if (name.Contains(".mp4"))
+                        {
+                            Log(string.Format("Start processing video {0}", name));
+
+                            ProcessVideo(name);
+
+                            Analyser analysis = new Analyser(pvd.GetFaceData(), boundsConfig);
+                            if (countExpressions) counter = analysis.CountEverything();
+
+                            string[] arr = analysis.BayesNaiveInfo1();
+
+                            if (name.Contains("true")) samples.Add(arr, true);
+                            else samples.Add(arr, false);
+
+                            Log(string.Format("Processing {0} done!", name));
+                            foreach (string str in arr)
+                                WriteInfo1(str + " ");
+                        }
+                    }
+
+                    Log(string.Format("All done!"));
+                }
                 Console.ReadKey();
-                
 
+                if (videoToPredict != null)
+                {
+                    Console.WriteLine("Going to predict");
+
+                    NaiveBayesClassifier classifier = new NaiveBayesClassifier(samples);
+
+                    string fname = @"C:\Users\aesth\Pictures\Camera Roll\test.mp4";
+                    ProcessVideo(fname);
+                    Analyser a = new Analyser(pvd.GetFaceData(), boundsConfig);
+                    double prob = classifier.Predict(a.BayesNaiveInfo1(), out bool isrock);
+
+                    Console.WriteLine("{0} {1}", isrock, prob);
+                }
+                Console.Read();
             }
-
+            catch (OptionException e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("Try '--help' for more information.");
+                return;
+            }
             catch (Exception ex)
             {
                 Log(ex.Message);
@@ -80,6 +148,17 @@ namespace ProcessVideoFile
 
         }
 
+
+
+        static void ShowHelp(OptionSet p)
+        {
+            Console.WriteLine("Usage: greet [OPTIONS]+ message");
+            Console.WriteLine("Greet a list of individuals with an optional message.");
+            Console.WriteLine("If no message is specified, a generic greeting is used.");
+            Console.WriteLine();
+            Console.WriteLine("Options:");
+            p.WriteOptionDescriptions(Console.Out);
+        }
 
         private static void ProcessVideo(string fileName)
         {
@@ -135,7 +214,7 @@ namespace ProcessVideoFile
 
         private static void ShowMessage(string message)
         {
-            Console.WriteLine(message);
+            Log(message);
         }
 
         private static void WriteInfo1(string info)

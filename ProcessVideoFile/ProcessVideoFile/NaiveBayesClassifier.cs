@@ -97,11 +97,11 @@ namespace ProcessVideoFile
 
             }
             if (truth > lie) istrue = true;
-                        else istrue = false;
+            else istrue = false;
 
             double probability = Math.Exp(lie) / (Math.Exp(lie) + Math.Exp(truth));
 
-            
+
 
             return probability;
 
