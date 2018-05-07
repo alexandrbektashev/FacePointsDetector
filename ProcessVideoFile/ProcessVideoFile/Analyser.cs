@@ -123,7 +123,7 @@ namespace ProcessVideoFile
             return map;
         }
 
-        public string[] BayesNaiveInfo1()
+        public string[] BayesNaiveInfo2()
         {
             Dictionary<string, int> dict = CountEverything();
 
@@ -134,6 +134,20 @@ namespace ProcessVideoFile
                 int c = dict[key];
                 for (int i = 0; i < c; i++)
                     info.Add(key);
+            }
+            return info.ToArray();
+        }
+
+        public string[] BayesNaiveInfo1()
+        {
+            Dictionary<string, int> dict = CountEverything();
+
+            List<string> info = new List<string>();
+
+            foreach (string key in dict.Keys)
+            {
+                int c = dict[key];
+                if (c > 0) info.Add(key);
             }
             return info.ToArray();
         }

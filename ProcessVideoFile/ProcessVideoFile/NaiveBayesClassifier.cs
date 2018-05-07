@@ -83,13 +83,23 @@ namespace ProcessVideoFile
                     double value = Math.Log((wic + 1) / (V + LcTruth));
                     truth += value;
                 }
+                else
+                {
+                    double value = Math.Log(1 / (V + LcTruth));
+                    truth += value;
+                }
+
                 if (freqLieWic.Keys.Contains(atr))
                 {
                     double wic = freqLieWic[atr];
                     double value = Math.Log((wic + 1) / (V + LcLie));
                     lie += value;
                 }
-
+                else
+                {
+                    double value = Math.Log( 1 / (V + LcLie));
+                    lie += value;
+                }
             }
             if (truth > lie) istrue = true;
             else istrue = false;
@@ -127,10 +137,22 @@ namespace ProcessVideoFile
                     truthProb.Append(string.Format(" {0:0.000}", value));
                     truth += value;
                 }
+                else
+                {
+                    double value = Math.Log(1 / (V + LcTruth));
+                    truthProb.Append(string.Format(" {0:0.000}", value));
+                    truth += value;
+                }
                 if (freqLieWic.Keys.Contains(atr))
                 {
                     double wic = freqLieWic[atr];
                     double value = Math.Log((wic + 1) / (V + LcLie));
+                    lieProb.Append(string.Format(" {0:0.000}", value));
+                    lie += value;
+                }
+                else
+                {
+                    double value = Math.Log(1 / (V + LcLie));
                     lieProb.Append(string.Format(" {0:0.000}", value));
                     lie += value;
                 }
@@ -143,6 +165,7 @@ namespace ProcessVideoFile
             data.Append(lieProb + Environment.NewLine);
 
             istrue = false;
+
             if (truth > lie)
             {
                 istrue = true;

@@ -160,7 +160,12 @@ namespace ProcessVideoFile
                     if (outputBayesInfoFile != null) File.WriteAllText(outputBayesInfoFile, classifier.GetInfo());
                     string data = classifier.Predict(videoPredictInput, out bool istrue, out double probability);
                     ShowMessage(string.Format("Is true - {0}; Lie probability - {1}", istrue, probability));
-                    if (outputBayesInfoFile != null) File.AppendAllText(outputBayesInfoFile, data);
+                    if (outputBayesInfoFile != null)
+                    {
+                        File.AppendAllText(outputBayesInfoFile, ToTextLine(videoPredictInput) + Environment.NewLine);
+                        File.AppendAllText(outputBayesInfoFile, data);
+                    }
+
                 }
                 Console.WriteLine("All done!");
             }

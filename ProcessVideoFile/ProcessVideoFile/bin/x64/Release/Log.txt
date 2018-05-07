@@ -1,153 +1,331 @@
-02.05.2018 12:38:32 Start processing video C:\TestExpressions\attention.mp4
-02.05.2018 12:39:10 Video processing done! 676 frames were captured, 573 frames was processed
-02.05.2018 12:39:10 Processing C:\TestExpressions\attention.mp4 done!
-02.05.2018 12:39:10 Start processing video C:\TestExpressions\attention2.mp4
-02.05.2018 12:39:20 Video processing done! 184 frames were captured, 173 frames was processed
-02.05.2018 12:39:20 Processing C:\TestExpressions\attention2.mp4 done!
-02.05.2018 12:39:20 Start processing video C:\TestExpressions\BrowFurrow.mp4
-02.05.2018 17:20:59 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180502_17_06_08_Pro.mp4
-02.05.2018 17:21:54 Video processing done! 180 frames were captured, 98 frames was processed
-02.05.2018 17:21:54 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180502_17_06_08_Pro.mp4 done!
-02.05.2018 17:21:54 All done!
-02.05.2018 18:23:52 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180502_17_06_08_Pro.mp4
-02.05.2018 18:24:05 Video processing done! 180 frames were captured, 98 frames was processed
-02.05.2018 18:24:06 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180502_17_06_08_Pro.mp4 done!
-02.05.2018 18:24:06 All done!
-04.05.2018 16:40:17 All done!
-04.05.2018 16:41:05 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4
-04.05.2018 16:41:24 Video processing done! 159 frames were captured, 80 frames was processed
-04.05.2018 16:41:24 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4 done!
-04.05.2018 16:41:25 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4
-04.05.2018 16:41:30 Video processing done! 134 frames were captured, 68 frames was processed
-04.05.2018 16:41:30 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4 done!
-04.05.2018 16:41:31 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4
-04.05.2018 16:41:36 Video processing done! 122 frames were captured, 61 frames was processed
-04.05.2018 16:41:36 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4 done!
-04.05.2018 16:41:36 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4
-04.05.2018 16:41:44 Video processing done! 180 frames were captured, 91 frames was processed
-04.05.2018 16:41:44 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4 done!
-04.05.2018 16:41:44 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4
-04.05.2018 16:41:52 Video processing done! 195 frames were captured, 99 frames was processed
-04.05.2018 16:41:52 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4 done!
-04.05.2018 16:41:52 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4
-04.05.2018 16:42:03 Video processing done! 236 frames were captured, 119 frames was processed
-04.05.2018 16:42:03 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4 done!
-04.05.2018 16:42:04 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4
-04.05.2018 16:42:18 Video processing done! 350 frames were captured, 177 frames was processed
-04.05.2018 16:42:18 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4 done!
-04.05.2018 16:42:18 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4
-04.05.2018 16:42:28 Video processing done! 252 frames were captured, 128 frames was processed
-04.05.2018 16:42:28 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4 done!
-04.05.2018 16:42:29 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4
-04.05.2018 16:42:36 Video processing done! 167 frames were captured, 85 frames was processed
-04.05.2018 16:42:36 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4 done!
-04.05.2018 16:42:36 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4
-04.05.2018 16:42:45 Video processing done! 229 frames were captured, 115 frames was processed
-04.05.2018 16:42:45 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4 done!
-04.05.2018 16:42:46 All done!
-04.05.2018 16:43:20 File does not exist: C:\Users\aesth\Pictures\Camera Rolltest.mp4
-Source: __cdecl FileVideoCapture::FileVideoCapture(const class boost::filesystem::path &,const float)(c:\jenkins\workspace\affdexface-sdk-win64\src\modules\utils\filevideocapture.cpp LINE 10)
-04.05.2018 16:43:52 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4
-04.05.2018 16:44:03 Video processing done! 159 frames were captured, 80 frames was processed
-04.05.2018 16:44:03 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4 done!
-04.05.2018 16:44:03 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4
-04.05.2018 16:44:08 Video processing done! 134 frames were captured, 68 frames was processed
-04.05.2018 16:44:09 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4 done!
-04.05.2018 16:44:09 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4
-04.05.2018 16:44:14 Video processing done! 122 frames were captured, 61 frames was processed
-04.05.2018 16:44:14 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4 done!
-04.05.2018 16:44:14 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4
-04.05.2018 16:44:21 Video processing done! 180 frames were captured, 91 frames was processed
-04.05.2018 16:44:21 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4 done!
-04.05.2018 16:44:22 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4
-04.05.2018 16:44:30 Video processing done! 195 frames were captured, 99 frames was processed
-04.05.2018 16:44:30 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4 done!
-04.05.2018 16:44:30 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4
-04.05.2018 16:44:39 Video processing done! 236 frames were captured, 119 frames was processed
-04.05.2018 16:44:39 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4 done!
-04.05.2018 16:44:39 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4
-04.05.2018 16:44:53 Video processing done! 350 frames were captured, 177 frames was processed
-04.05.2018 16:44:53 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4 done!
-04.05.2018 16:44:53 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4
-04.05.2018 16:45:03 Video processing done! 252 frames were captured, 128 frames was processed
-04.05.2018 16:45:03 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4 done!
-04.05.2018 16:45:03 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4
-04.05.2018 16:45:10 Video processing done! 167 frames were captured, 85 frames was processed
-04.05.2018 16:45:10 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4 done!
-04.05.2018 16:45:10 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4
-04.05.2018 16:45:19 Video processing done! 229 frames were captured, 115 frames was processed
-04.05.2018 16:45:19 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4 done!
-04.05.2018 16:45:19 All done!
-04.05.2018 16:45:35 Video processing done! 125 frames were captured, 64 frames was processed
-04.05.2018 16:48:45 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4
-04.05.2018 16:48:56 Video processing done! 159 frames were captured, 80 frames was processed
-04.05.2018 16:48:56 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4 done!
-04.05.2018 16:48:56 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4
-04.05.2018 16:49:02 Video processing done! 134 frames were captured, 68 frames was processed
-04.05.2018 16:49:02 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4 done!
-04.05.2018 16:49:02 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4
-04.05.2018 16:49:07 Video processing done! 122 frames were captured, 61 frames was processed
-04.05.2018 16:49:07 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4 done!
-04.05.2018 16:49:07 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4
-04.05.2018 16:49:14 Video processing done! 180 frames were captured, 91 frames was processed
-04.05.2018 16:49:14 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4 done!
-04.05.2018 16:49:15 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4
-04.05.2018 16:49:22 Video processing done! 195 frames were captured, 99 frames was processed
-04.05.2018 16:49:22 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4 done!
-04.05.2018 16:49:23 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4
-04.05.2018 16:49:32 Video processing done! 236 frames were captured, 119 frames was processed
-04.05.2018 16:49:32 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4 done!
-04.05.2018 16:49:32 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4
-04.05.2018 16:49:47 Video processing done! 350 frames were captured, 177 frames was processed
-04.05.2018 16:49:47 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4 done!
-04.05.2018 16:49:47 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4
-04.05.2018 16:49:59 Video processing done! 252 frames were captured, 128 frames was processed
-04.05.2018 16:49:59 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4 done!
-04.05.2018 16:49:59 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4
-04.05.2018 16:50:06 Video processing done! 167 frames were captured, 85 frames was processed
-04.05.2018 16:50:06 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4 done!
-04.05.2018 16:50:06 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4
-04.05.2018 16:50:16 Video processing done! 229 frames were captured, 115 frames was processed
-04.05.2018 16:50:16 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4 done!
-04.05.2018 16:50:16 All done!
-04.05.2018 16:51:35 Video processing done! 125 frames were captured, 64 frames was processed
-04.05.2018 16:53:00 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4
-04.05.2018 16:53:11 Video processing done! 159 frames were captured, 80 frames was processed
-04.05.2018 16:53:11 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_44_Protrue.mp4 done!
-04.05.2018 16:53:11 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4
-04.05.2018 16:53:16 Video processing done! 134 frames were captured, 68 frames was processed
-04.05.2018 16:53:16 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_32_56_Protrue.mp4 done!
-04.05.2018 16:53:16 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4
-04.05.2018 16:53:21 Video processing done! 122 frames were captured, 61 frames was processed
-04.05.2018 16:53:22 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_16_Pro.mp4 done!
-04.05.2018 16:53:22 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4
-04.05.2018 16:53:29 Video processing done! 180 frames were captured, 91 frames was processed
-04.05.2018 16:53:29 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_37_Pro.mp4 done!
-04.05.2018 16:53:29 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4
-04.05.2018 16:53:36 Video processing done! 195 frames were captured, 99 frames was processed
-04.05.2018 16:53:36 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_33_58_Pro.mp4 done!
-04.05.2018 16:53:36 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4
-04.05.2018 16:53:45 Video processing done! 236 frames were captured, 119 frames was processed
-04.05.2018 16:53:45 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_14_Protrue.mp4 done!
-04.05.2018 16:53:45 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4
-04.05.2018 16:53:58 Video processing done! 350 frames were captured, 177 frames was processed
-04.05.2018 16:53:58 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_30_Pro.mp4 done!
-04.05.2018 16:53:58 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4
-04.05.2018 16:54:08 Video processing done! 252 frames were captured, 128 frames was processed
-04.05.2018 16:54:08 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_34_50_Protrue.mp4 done!
-04.05.2018 16:54:08 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4
-04.05.2018 16:54:14 Video processing done! 167 frames were captured, 85 frames was processed
-04.05.2018 16:54:15 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_04_Protrue.mp4 done!
-04.05.2018 16:54:15 Start processing video C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4
-04.05.2018 16:54:23 Video processing done! 229 frames were captured, 115 frames was processed
-04.05.2018 16:54:23 Processing C:\Users\aesth\Pictures\Camera Roll\test\WIN_20180504_16_35_16_Pro.mp4 done!
-04.05.2018 16:54:23 All done!
-04.05.2018 16:54:58 Video processing done! 125 frames were captured, 64 frames was processed
-04.05.2018 18:17:33 Пустое имя пути не допускается.
-04.05.2018 18:18:24 Пустое имя пути не допускается.
-04.05.2018 18:27:57 Входная строка имела неверный формат.
-04.05.2018 23:11:35 Файл 'C:\Users\aesth\source\repos\TruthMachine\ProcessVideoFile\ProcessVideoFile\bin\x64\Release\input.txt' не найден.
-04.05.2018 23:12:32 Is true - False; Lie probability - 0,852275246783048
-04.05.2018 23:13:36 Is true - False; Lie probability - 0,852275246783048
-04.05.2018 23:16:03 Is true - False; Lie probability - 0,852275246783048
-04.05.2018 23:16:56 Is true - False; Lie probability - 0,852275246783048
+07.05.2018 10:48:39 Start processing video .\samples\10true.mp4
+07.05.2018 10:48:43 Processing finished!
+07.05.2018 10:48:44 Video processing done! 88 frames were captured, 88 frames was processed
+07.05.2018 10:48:44 Processing .\samples\10true.mp4 done!
+07.05.2018 10:48:44 Start processing video .\samples\11false.mp4
+07.05.2018 10:48:50 Processing finished!
+07.05.2018 10:48:51 Video processing done! 174 frames were captured, 174 frames was processed
+07.05.2018 10:48:51 Processing .\samples\11false.mp4 done!
+07.05.2018 10:48:51 Start processing video .\samples\12false.mp4
+07.05.2018 10:48:57 Processing finished!
+07.05.2018 10:48:57 Video processing done! 196 frames were captured, 196 frames was processed
+07.05.2018 10:48:57 Processing .\samples\12false.mp4 done!
+07.05.2018 10:48:57 Start processing video .\samples\13true.mp4
+07.05.2018 10:49:02 Processing finished!
+07.05.2018 10:49:02 Video processing done! 132 frames were captured, 117 frames was processed
+07.05.2018 10:49:02 Processing .\samples\13true.mp4 done!
+07.05.2018 10:49:02 Start processing video .\samples\15true.mp4
+07.05.2018 10:49:06 Processing finished!
+07.05.2018 10:49:06 Video processing done! 93 frames were captured, 93 frames was processed
+07.05.2018 10:49:06 Processing .\samples\15true.mp4 done!
+07.05.2018 10:49:06 Start processing video .\samples\16true.mp4
+07.05.2018 10:49:11 Processing finished!
+07.05.2018 10:49:11 Video processing done! 110 frames were captured, 110 frames was processed
+07.05.2018 10:49:11 Processing .\samples\16true.mp4 done!
+07.05.2018 10:49:11 Start processing video .\samples\21false.mp4
+07.05.2018 10:49:14 Processing finished!
+07.05.2018 10:49:14 Video processing done! 73 frames were captured, 73 frames was processed
+07.05.2018 10:49:14 Processing .\samples\21false.mp4 done!
+07.05.2018 10:49:14 Start processing video .\samples\23true.mp4
+07.05.2018 10:49:17 Processing finished!
+07.05.2018 10:49:19 Video processing done! 52 frames were captured, 45 frames was processed
+07.05.2018 10:49:19 Processing .\samples\23true.mp4 done!
+07.05.2018 10:49:19 Start processing video .\samples\24true.mp4
+07.05.2018 10:49:21 Processing finished!
+07.05.2018 10:49:22 Video processing done! 49 frames were captured, 41 frames was processed
+07.05.2018 10:49:22 Processing .\samples\24true.mp4 done!
+07.05.2018 10:49:22 Start processing video .\samples\25false.mp4
+07.05.2018 10:49:24 Processing finished!
+07.05.2018 10:49:24 Video processing done! 50 frames were captured, 42 frames was processed
+07.05.2018 10:49:24 Processing .\samples\25false.mp4 done!
+07.05.2018 10:49:24 Start processing video .\samples\26false.mp4
+07.05.2018 10:49:28 Processing finished!
+07.05.2018 10:49:29 Video processing done! 85 frames were captured, 77 frames was processed
+07.05.2018 10:49:29 Processing .\samples\26false.mp4 done!
+07.05.2018 10:49:29 Start processing video .\samples\27false.mp4
+07.05.2018 10:49:32 Processing finished!
+07.05.2018 10:49:33 Video processing done! 76 frames were captured, 76 frames was processed
+07.05.2018 10:49:33 Processing .\samples\27false.mp4 done!
+07.05.2018 10:49:33 Start processing video .\samples\3false.mp4
+07.05.2018 10:49:42 Processing finished!
+07.05.2018 10:49:42 Video processing done! 287 frames were captured, 272 frames was processed
+07.05.2018 10:49:42 Processing .\samples\3false.mp4 done!
+07.05.2018 10:49:42 Start processing video .\samples\4false.mp4
+07.05.2018 10:49:48 Processing finished!
+07.05.2018 10:49:48 Video processing done! 144 frames were captured, 144 frames was processed
+07.05.2018 10:49:48 Processing .\samples\4false.mp4 done!
+07.05.2018 10:49:48 Start processing video .\samples\5false.mp4
+07.05.2018 10:49:53 Processing finished!
+07.05.2018 10:49:53 Video processing done! 138 frames were captured, 123 frames was processed
+07.05.2018 10:49:53 Processing .\samples\5false.mp4 done!
+07.05.2018 10:49:53 Start processing video .\samples\6true.mp4
+07.05.2018 10:49:57 Processing finished!
+07.05.2018 10:49:58 Video processing done! 128 frames were captured, 114 frames was processed
+07.05.2018 10:49:58 Processing .\samples\6true.mp4 done!
+07.05.2018 10:49:58 Start processing video .\samples\7true.mp4
+07.05.2018 10:50:02 Processing finished!
+07.05.2018 10:50:02 Video processing done! 101 frames were captured, 101 frames was processed
+07.05.2018 10:50:02 Processing .\samples\7true.mp4 done!
+07.05.2018 10:50:02 Start processing video .\samples\8true.mp4
+07.05.2018 10:50:06 Processing finished!
+07.05.2018 10:50:07 Video processing done! 111 frames were captured, 111 frames was processed
+07.05.2018 10:50:07 Processing .\samples\8true.mp4 done!
+07.05.2018 10:50:07 Start processing video .\samples\9false.mp4
+07.05.2018 10:50:11 Processing finished!
+07.05.2018 10:50:12 Video processing done! 123 frames were captured, 123 frames was processed
+07.05.2018 10:50:12 Processing .\samples\9false.mp4 done!
+07.05.2018 10:50:12 All samples done!
+07.05.2018 10:50:41 Start processing video .\samples\10true.mp4
+07.05.2018 10:50:45 Processing finished!
+07.05.2018 10:50:46 Video processing done! 88 frames were captured, 88 frames was processed
+07.05.2018 10:50:46 Processing .\samples\10true.mp4 done!
+07.05.2018 10:50:46 Start processing video .\samples\11false.mp4
+07.05.2018 10:50:52 Processing finished!
+07.05.2018 10:50:53 Video processing done! 174 frames were captured, 174 frames was processed
+07.05.2018 10:50:53 Processing .\samples\11false.mp4 done!
+07.05.2018 10:50:53 Start processing video .\samples\12false.mp4
+07.05.2018 10:50:59 Processing finished!
+07.05.2018 10:50:59 Video processing done! 196 frames were captured, 196 frames was processed
+07.05.2018 10:50:59 Processing .\samples\12false.mp4 done!
+07.05.2018 10:50:59 Start processing video .\samples\13true.mp4
+07.05.2018 10:51:04 Processing finished!
+07.05.2018 10:51:04 Video processing done! 132 frames were captured, 117 frames was processed
+07.05.2018 10:51:04 Processing .\samples\13true.mp4 done!
+07.05.2018 10:51:04 Start processing video .\samples\15true.mp4
+07.05.2018 10:51:08 Processing finished!
+07.05.2018 10:51:08 Video processing done! 93 frames were captured, 93 frames was processed
+07.05.2018 10:51:08 Processing .\samples\15true.mp4 done!
+07.05.2018 10:51:08 Start processing video .\samples\16true.mp4
+07.05.2018 10:51:12 Processing finished!
+07.05.2018 10:51:12 Video processing done! 110 frames were captured, 110 frames was processed
+07.05.2018 10:51:12 Processing .\samples\16true.mp4 done!
+07.05.2018 10:51:12 Start processing video .\samples\21false.mp4
+07.05.2018 10:51:16 Processing finished!
+07.05.2018 10:51:16 Video processing done! 73 frames were captured, 73 frames was processed
+07.05.2018 10:51:16 Processing .\samples\21false.mp4 done!
+07.05.2018 10:51:16 Start processing video .\samples\23true.mp4
+07.05.2018 10:51:18 Processing finished!
+07.05.2018 10:51:18 Video processing done! 52 frames were captured, 45 frames was processed
+07.05.2018 10:51:18 Processing .\samples\23true.mp4 done!
+07.05.2018 10:51:19 Start processing video .\samples\24true.mp4
+07.05.2018 10:51:21 Processing finished!
+07.05.2018 10:51:21 Video processing done! 49 frames were captured, 41 frames was processed
+07.05.2018 10:51:21 Processing .\samples\24true.mp4 done!
+07.05.2018 10:51:21 Start processing video .\samples\25false.mp4
+07.05.2018 10:51:23 Processing finished!
+07.05.2018 10:51:23 Video processing done! 50 frames were captured, 42 frames was processed
+07.05.2018 10:51:23 Processing .\samples\25false.mp4 done!
+07.05.2018 10:51:23 Start processing video .\samples\26false.mp4
+07.05.2018 10:51:27 Processing finished!
+07.05.2018 10:51:27 Video processing done! 85 frames were captured, 77 frames was processed
+07.05.2018 10:51:27 Processing .\samples\26false.mp4 done!
+07.05.2018 10:51:27 Start processing video .\samples\27false.mp4
+07.05.2018 10:51:30 Processing finished!
+07.05.2018 10:51:30 Video processing done! 76 frames were captured, 76 frames was processed
+07.05.2018 10:51:31 Processing .\samples\27false.mp4 done!
+07.05.2018 10:51:31 Start processing video .\samples\3false.mp4
+07.05.2018 10:51:40 Processing finished!
+07.05.2018 10:51:40 Video processing done! 287 frames were captured, 272 frames was processed
+07.05.2018 10:51:40 Processing .\samples\3false.mp4 done!
+07.05.2018 10:51:40 Start processing video .\samples\4false.mp4
+07.05.2018 10:51:45 Processing finished!
+07.05.2018 10:51:45 Video processing done! 144 frames were captured, 144 frames was processed
+07.05.2018 10:51:45 Processing .\samples\4false.mp4 done!
+07.05.2018 10:51:45 Start processing video .\samples\5false.mp4
+07.05.2018 10:51:50 Processing finished!
+07.05.2018 10:51:50 Video processing done! 138 frames were captured, 123 frames was processed
+07.05.2018 10:51:50 Processing .\samples\5false.mp4 done!
+07.05.2018 10:51:50 Start processing video .\samples\6true.mp4
+07.05.2018 10:51:54 Processing finished!
+07.05.2018 10:51:54 Video processing done! 128 frames were captured, 114 frames was processed
+07.05.2018 10:51:54 Processing .\samples\6true.mp4 done!
+07.05.2018 10:51:54 Start processing video .\samples\7true.mp4
+07.05.2018 10:51:58 Processing finished!
+07.05.2018 10:51:59 Video processing done! 101 frames were captured, 101 frames was processed
+07.05.2018 10:51:59 Processing .\samples\7true.mp4 done!
+07.05.2018 10:51:59 Start processing video .\samples\8true.mp4
+07.05.2018 10:52:03 Processing finished!
+07.05.2018 10:52:03 Video processing done! 111 frames were captured, 111 frames was processed
+07.05.2018 10:52:03 Processing .\samples\8true.mp4 done!
+07.05.2018 10:52:03 Start processing video .\samples\9false.mp4
+07.05.2018 10:52:08 Processing finished!
+07.05.2018 10:52:08 Video processing done! 123 frames were captured, 123 frames was processed
+07.05.2018 10:52:08 Processing .\samples\9false.mp4 done!
+07.05.2018 10:52:08 All samples done!
+07.05.2018 10:53:35 Processing finished!
+07.05.2018 10:53:36 Video processing done! 46 frames were captured, 39 frames was processed
+07.05.2018 10:53:36 Is true - True; Lie probability - 0,378181818181818
+07.05.2018 10:53:50 Processing finished!
+07.05.2018 10:53:50 Video processing done! 49 frames were captured, 49 frames was processed
+07.05.2018 10:53:50 Is true - True; Lie probability - 0,475545212041288
+07.05.2018 10:56:33 Start processing video .\samples\10true.mp4
+07.05.2018 10:56:37 Processing finished!
+07.05.2018 10:56:38 Video processing done! 88 frames were captured, 88 frames was processed
+07.05.2018 10:56:38 Processing .\samples\10true.mp4 done!
+07.05.2018 10:56:38 Start processing video .\samples\11false.mp4
+07.05.2018 10:56:44 Processing finished!
+07.05.2018 10:56:44 Video processing done! 174 frames were captured, 174 frames was processed
+07.05.2018 10:56:44 Processing .\samples\11false.mp4 done!
+07.05.2018 10:56:44 Start processing video .\samples\12false.mp4
+07.05.2018 10:56:50 Processing finished!
+07.05.2018 10:56:51 Video processing done! 196 frames were captured, 196 frames was processed
+07.05.2018 10:56:51 Processing .\samples\12false.mp4 done!
+07.05.2018 10:56:51 Start processing video .\samples\13true.mp4
+07.05.2018 10:56:55 Processing finished!
+07.05.2018 10:56:55 Video processing done! 132 frames were captured, 117 frames was processed
+07.05.2018 10:56:55 Processing .\samples\13true.mp4 done!
+07.05.2018 10:56:55 Start processing video .\samples\15true.mp4
+07.05.2018 10:56:59 Processing finished!
+07.05.2018 10:56:59 Video processing done! 93 frames were captured, 93 frames was processed
+07.05.2018 10:56:59 Processing .\samples\15true.mp4 done!
+07.05.2018 10:56:59 Start processing video .\samples\16true.mp4
+07.05.2018 10:57:03 Processing finished!
+07.05.2018 10:57:04 Video processing done! 110 frames were captured, 110 frames was processed
+07.05.2018 10:57:04 Processing .\samples\16true.mp4 done!
+07.05.2018 10:57:04 Start processing video .\samples\22false.mp4
+07.05.2018 10:57:06 Processing finished!
+07.05.2018 10:57:06 Video processing done! 49 frames were captured, 49 frames was processed
+07.05.2018 10:57:06 Processing .\samples\22false.mp4 done!
+07.05.2018 10:57:06 Start processing video .\samples\23true.mp4
+07.05.2018 10:57:08 Processing finished!
+07.05.2018 10:57:09 Video processing done! 52 frames were captured, 45 frames was processed
+07.05.2018 10:57:09 Processing .\samples\23true.mp4 done!
+07.05.2018 10:57:09 Start processing video .\samples\24true.mp4
+07.05.2018 10:57:11 Processing finished!
+07.05.2018 10:57:12 Video processing done! 49 frames were captured, 41 frames was processed
+07.05.2018 10:57:12 Processing .\samples\24true.mp4 done!
+07.05.2018 10:57:12 Start processing video .\samples\25false.mp4
+07.05.2018 10:57:14 Processing finished!
+07.05.2018 10:57:14 Video processing done! 50 frames were captured, 42 frames was processed
+07.05.2018 10:57:14 Processing .\samples\25false.mp4 done!
+07.05.2018 10:57:14 Start processing video .\samples\26false.mp4
+07.05.2018 10:57:17 Processing finished!
+07.05.2018 10:57:18 Video processing done! 85 frames were captured, 77 frames was processed
+07.05.2018 10:57:18 Processing .\samples\26false.mp4 done!
+07.05.2018 10:57:18 Start processing video .\samples\27false.mp4
+07.05.2018 10:57:21 Processing finished!
+07.05.2018 10:57:21 Video processing done! 76 frames were captured, 76 frames was processed
+07.05.2018 10:57:21 Processing .\samples\27false.mp4 done!
+07.05.2018 10:57:21 Start processing video .\samples\3false.mp4
+07.05.2018 10:57:30 Processing finished!
+07.05.2018 10:57:30 Video processing done! 287 frames were captured, 272 frames was processed
+07.05.2018 10:57:30 Processing .\samples\3false.mp4 done!
+07.05.2018 10:57:30 Start processing video .\samples\4false.mp4
+07.05.2018 10:57:35 Processing finished!
+07.05.2018 10:57:36 Video processing done! 144 frames were captured, 144 frames was processed
+07.05.2018 10:57:36 Processing .\samples\4false.mp4 done!
+07.05.2018 10:57:36 Start processing video .\samples\5false.mp4
+07.05.2018 10:57:40 Processing finished!
+07.05.2018 10:57:40 Video processing done! 138 frames were captured, 123 frames was processed
+07.05.2018 10:57:40 Processing .\samples\5false.mp4 done!
+07.05.2018 10:57:40 Start processing video .\samples\6true.mp4
+07.05.2018 10:57:44 Processing finished!
+07.05.2018 10:57:45 Video processing done! 128 frames were captured, 114 frames was processed
+07.05.2018 10:57:45 Processing .\samples\6true.mp4 done!
+07.05.2018 10:57:45 Start processing video .\samples\7true.mp4
+07.05.2018 10:57:49 Processing finished!
+07.05.2018 10:57:49 Video processing done! 101 frames were captured, 101 frames was processed
+07.05.2018 10:57:49 Processing .\samples\7true.mp4 done!
+07.05.2018 10:57:49 Start processing video .\samples\8true.mp4
+07.05.2018 10:57:53 Processing finished!
+07.05.2018 10:57:54 Video processing done! 111 frames were captured, 111 frames was processed
+07.05.2018 10:57:54 Processing .\samples\8true.mp4 done!
+07.05.2018 10:57:54 Start processing video .\samples\9false.mp4
+07.05.2018 10:57:58 Processing finished!
+07.05.2018 10:57:58 Video processing done! 123 frames were captured, 123 frames was processed
+07.05.2018 10:57:58 Processing .\samples\9false.mp4 done!
+07.05.2018 10:57:59 All samples done!
+07.05.2018 10:58:40 Processing finished!
+07.05.2018 10:58:41 Video processing done! 43 frames were captured, 35 frames was processed
+07.05.2018 10:58:41 Is true - False; Lie probability - 0,539354070800436
+07.05.2018 10:59:17 Не удалось найти часть пути "C:\samples\vids\control2_expressions.txt".
+07.05.2018 10:59:58 Directory not found
+07.05.2018 11:00:17 Start processing video samples\10true.mp4
+07.05.2018 11:00:21 Processing finished!
+07.05.2018 11:00:22 Video processing done! 88 frames were captured, 88 frames was processed
+07.05.2018 11:00:22 Processing samples\10true.mp4 done!
+07.05.2018 11:00:22 Start processing video samples\11false.mp4
+07.05.2018 11:00:28 Processing finished!
+07.05.2018 11:00:29 Video processing done! 174 frames were captured, 174 frames was processed
+07.05.2018 11:00:29 Processing samples\11false.mp4 done!
+07.05.2018 11:00:29 Start processing video samples\12false.mp4
+07.05.2018 11:00:35 Processing finished!
+07.05.2018 11:00:35 Video processing done! 196 frames were captured, 196 frames was processed
+07.05.2018 11:00:35 Processing samples\12false.mp4 done!
+07.05.2018 11:00:35 Start processing video samples\13true.mp4
+07.05.2018 11:00:40 Processing finished!
+07.05.2018 11:00:40 Video processing done! 132 frames were captured, 117 frames was processed
+07.05.2018 11:00:40 Processing samples\13true.mp4 done!
+07.05.2018 11:00:40 Start processing video samples\15true.mp4
+07.05.2018 11:00:44 Processing finished!
+07.05.2018 11:00:44 Video processing done! 93 frames were captured, 93 frames was processed
+07.05.2018 11:00:44 Processing samples\15true.mp4 done!
+07.05.2018 11:00:44 Start processing video samples\16true.mp4
+07.05.2018 11:00:48 Processing finished!
+07.05.2018 11:00:48 Video processing done! 110 frames were captured, 110 frames was processed
+07.05.2018 11:00:48 Processing samples\16true.mp4 done!
+07.05.2018 11:00:48 Start processing video samples\22false.mp4
+07.05.2018 11:00:51 Processing finished!
+07.05.2018 11:00:51 Video processing done! 49 frames were captured, 49 frames was processed
+07.05.2018 11:00:51 Processing samples\22false.mp4 done!
+07.05.2018 11:00:51 Start processing video samples\23true.mp4
+07.05.2018 11:00:53 Processing finished!
+07.05.2018 11:00:54 Video processing done! 52 frames were captured, 45 frames was processed
+07.05.2018 11:00:54 Processing samples\23true.mp4 done!
+07.05.2018 11:00:54 Start processing video samples\24true.mp4
+07.05.2018 11:00:56 Processing finished!
+07.05.2018 11:00:56 Video processing done! 49 frames were captured, 41 frames was processed
+07.05.2018 11:00:56 Processing samples\24true.mp4 done!
+07.05.2018 11:00:56 Start processing video samples\25false.mp4
+07.05.2018 11:00:58 Processing finished!
+07.05.2018 11:00:58 Video processing done! 50 frames were captured, 42 frames was processed
+07.05.2018 11:00:58 Processing samples\25false.mp4 done!
+07.05.2018 11:00:58 Start processing video samples\26false.mp4
+07.05.2018 11:01:02 Processing finished!
+07.05.2018 11:01:02 Video processing done! 85 frames were captured, 77 frames was processed
+07.05.2018 11:01:02 Processing samples\26false.mp4 done!
+07.05.2018 11:01:02 Start processing video samples\27false.mp4
+07.05.2018 11:01:05 Processing finished!
+07.05.2018 11:01:05 Video processing done! 76 frames were captured, 76 frames was processed
+07.05.2018 11:01:05 Processing samples\27false.mp4 done!
+07.05.2018 11:01:05 Start processing video samples\3false.mp4
+07.05.2018 11:01:15 Processing finished!
+07.05.2018 11:01:15 Video processing done! 287 frames were captured, 272 frames was processed
+07.05.2018 11:01:15 Processing samples\3false.mp4 done!
+07.05.2018 11:01:15 Start processing video samples\4false.mp4
+07.05.2018 11:01:20 Processing finished!
+07.05.2018 11:01:20 Video processing done! 144 frames were captured, 144 frames was processed
+07.05.2018 11:01:20 Processing samples\4false.mp4 done!
+07.05.2018 11:01:20 Start processing video samples\5false.mp4
+07.05.2018 11:01:25 Processing finished!
+07.05.2018 11:01:25 Video processing done! 138 frames were captured, 123 frames was processed
+07.05.2018 11:01:25 Processing samples\5false.mp4 done!
+07.05.2018 11:01:25 Start processing video samples\6true.mp4
+07.05.2018 11:01:30 Processing finished!
+07.05.2018 11:01:30 Video processing done! 128 frames were captured, 114 frames was processed
+07.05.2018 11:01:30 Processing samples\6true.mp4 done!
+07.05.2018 11:01:30 Start processing video samples\7true.mp4
+07.05.2018 11:01:34 Processing finished!
+07.05.2018 11:01:34 Video processing done! 101 frames were captured, 101 frames was processed
+07.05.2018 11:01:34 Processing samples\7true.mp4 done!
+07.05.2018 11:01:34 Start processing video samples\8true.mp4
+07.05.2018 11:01:39 Processing finished!
+07.05.2018 11:01:39 Video processing done! 111 frames were captured, 111 frames was processed
+07.05.2018 11:01:39 Processing samples\8true.mp4 done!
+07.05.2018 11:01:39 Start processing video samples\9false.mp4
+07.05.2018 11:01:43 Processing finished!
+07.05.2018 11:01:43 Video processing done! 123 frames were captured, 123 frames was processed
+07.05.2018 11:01:43 Processing samples\9false.mp4 done!
+07.05.2018 11:01:44 All samples done!
+07.05.2018 11:02:18 Processing finished!
+07.05.2018 11:02:19 Video processing done! 43 frames were captured, 35 frames was processed
+07.05.2018 11:02:19 Is true - False; Lie probability - 0,605451317515264
+07.05.2018 11:02:36 Processing finished!
+07.05.2018 11:02:37 Video processing done! 46 frames were captured, 39 frames was processed
+07.05.2018 11:02:37 Is true - True; Lie probability - 0,352499277665415
+07.05.2018 11:05:45 Processing finished!
+07.05.2018 11:05:46 Video processing done! 46 frames were captured, 39 frames was processed
+07.05.2018 11:05:46 Is true - True; Lie probability - 0,352499277665415
+07.05.2018 11:06:09 Processing finished!
+07.05.2018 11:06:10 Video processing done! 43 frames were captured, 35 frames was processed
+07.05.2018 11:06:10 Is true - False; Lie probability - 0,605451317515264
